@@ -1,0 +1,224 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2019 Fall 計算機程式課程網頁</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2019 Fall 計算機程式課程網頁</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2019 Fall 計算機程式課程網頁</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='課程簡介.html'>課程簡介</a><ul class='dropdown'><li><a href='Design Theory.html'>Design Theory</a><li><a href='Abstract Thinking.html'>Abstract Thinking</a><li><a href='Computer Algorithms.html'>Computer Algorithms</a></li></ul><li><a href='課程表單.html'>課程表單</a><li><a href='Windows Notebook.html'>Windows Notebook</a><li><a href='Ubuntu Notebook.html'>Ubuntu Notebook</a><li class='has-children'><a href='Mac Notebook.html'>Mac Notebook</a><ul class='dropdown'><li><a href='Mac SSH 連線.html'>Mac SSH 連線</a></li></ul><li><a href='亂數分組.html'>亂數分組</a><li><a href='FFmpeg.html'>FFmpeg</a><li><a href='QandA.html'>QandA</a><li class='has-children'><a href='USB 隨身碟.html'>USB 隨身碟</a><ul class='dropdown'><li><a href='USB 程式系統.html'>USB 程式系統</a><li><a href='Ubuntu 伺服器.html'>Ubuntu 伺服器</a></li></ul><li><a href='課程筆記.html'>課程筆記</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li><a href='協同議題.html'>協同議題</a><li><a href='Task1.html'>Task1</a><li class='has-children'><a href='Task2.html'>Task2</a><ul class='dropdown'><li><a href='Math.html'>Math</a><li><a href='Dart2 基本語法.html'>Dart2 基本語法</a><li><a href='Dart Tour.html'>Dart Tour</a><li><a href='Unit Converter.html'>Unit Converter</a><li><a href='SciTE setup.html'>SciTE setup</a><li><a href='Dart FFI.html'>Dart FFI</a><li><a href='Cango Library.html'>Cango Library</a></li></ul><li class='has-children'><a href='Task3.html'>Task3</a><ul class='dropdown'><li><a href='Batch Command.html'>Batch Command</a><li><a href='Temp Conv.html'>Temp Conv</a><li><a href='Five-pointed_star.html'>Five-pointed_star</a><li><a href='Tetris.html'>Tetris</a></li></ul><li><a href='Task4.html'>Task4</a><li><a href='Project.html'>Project</a></li></ul><li class='has-children'><a href='Github.html'>Github</a><ul class='dropdown'><li><a href='Github Guide.html'>Github Guide</a><li class='has-children'><a href='Fossil SCM.html'>Fossil SCM</a><ul class='dropdown'><li><a href='Fossil 伺服器.html'>Fossil 伺服器</a><li><a href='Fossil 操作.html'>Fossil 操作</a><li><a href='Fossil 指令.html'>Fossil 指令</a></li></li></ul></ul><li class='has-children'><a href='DartLang.html'>DartLang</a><ul class='dropdown'><li><a href='Dart2 Spec.html'>Dart2 Spec</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Documentation.html'>Documentation</a><li><a href='Python.html'>Python</a><li class='has-children'><a href='Javascript.html'>Javascript</a><ul class='dropdown'><li><a href='JS examples.html'>JS examples</a><li><a href='node.js.html'>node.js</a><li><a href='GCS.html'>GCS</a></li></ul><li class='has-children'><a href='Ebooks.html'>Ebooks</a><ul class='dropdown'><li><a href='Practical Flutter.html'>Practical Flutter</a><li><a href='Quick Dart.html'>Quick Dart</a></li></ul><li class='has-children'><a href='Flutter.html'>Flutter</a><ul class='dropdown'><li><a href='Flutter Mobile.html'>Flutter Mobile</a><li><a href='Flutter Web.html'>Flutter Web</a></li></ul><li class='has-children'><a href='Dart.html'>Dart</a><ul class='dropdown'><li><a href='Dart on Server.html'>Dart on Server</a><li><a href='DartPad.html'>DartPad</a><li><a href='petitparse.html'>petitparse</a><li><a href='MOCAD.html'>MOCAD</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='Design Theory.html'>Next</a> >> Design Theory<br /><h1>課程簡介</h1>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/6ktWkyQvIQU" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/gg5o6KaWelo" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/hjDvPc1liwk" width="560"></iframe></p>
+<p>說明課程進行方式:</p>
+<p style="padding-left: 30px;">實際操作示範並利用 <a href="https://getsharex.com/">ShareX</a> 拍攝成 mp4 供學員參考</p>
+<p style="padding-left: 30px;">學員將上課操作影片整理成帶字幕 (透過 <a href="http://www.aegisub.org/">Aegisub</a>, <a href="http://www.avidemux.org/nightly/win64_support/">Avidemux</a>, 以及 <a href="https://www.openshot.org/">Openshot</a>) 的教學影片, 並嵌入個人網頁</p>
+<p style="padding-left: 30px;">每週提供助教時間 (週四晚上 19:30-21:30), 可執行上機練習、磁區內容重整與學員問題解答</p>
+<p style="padding-left: 30px;">分組解決指定問題時, 分為組員個人之心得整理, 與所有組員協同研討之結論</p>
+<p>評分方式:</p>
+<p style="padding-left: 30px;">依照組員自評、互評與教師評分綜合進行計分</p>
+<p>課程目標:</p>
+<p style="padding-left: 30px;"><span>使用可攜程式系統、網際內容管理系統與 Github, 管理各學員與分組學習內容, 同時利用 Dart 程式語言, 設法打造可用於電腦輔助機械設計流程的工具.</span></p>
+<p><span>網路連線:</span></p>
+<p style="padding-left: 30px;"><span>為了能夠利用廣域網路搜尋資料, 進行協同設計, 各學員在電腦輔助設計室使用電腦, 最重要的設定除了開機就是上網.</span></p>
+<p style="padding-left: 30px;"><span>由於 IPv4 協定的網路連線受限於單一外部 IPv4 位址的限制, 導致上網頻寬受到限制, 因此在儘可能的情況下, 將使用 IPv6 協定上網. (<a href="./../downloads/認識IPv4與IPv6的差異.pdf">IPv4 與 IPv6 網路協定差異.pdf</a>, <a href="https://www.ibm.com/support/knowledgecenter/zh-tw/ssw_ibm_i_71/rzai2/rzai2compipv4ipv6.htm">比較 IPv4 與 IPv6</a>)</span></p>
+<p style="padding-left: 30px;">儘管透過純 IPv6 協定上網有許多好處, 但是部分網站 (例如: <a href="https://github.com">https://github.com</a>) 尚未支援 IPv6 協定連線, 因此在電腦輔助設計室以純 IPv6 協定上網後, 必須根據各種不同的連線協定 (例如: 瀏覽器的 html 協定, python pip 模組安裝, git http 與 git ssh 連線) 設定不同的雙支援代理主機.</p>
+<p style="padding-left: 30px;">另外, 在各組員獨立開發程式的過程, 可以全程在單機環境與區域網路連線下利用 <a href="https://www.virtualbox.org/">Virtualbox</a> 虛擬主機模擬遠端伺服器的情況下執行各項任務, 以 <a href="https://fossil-scm.org">Fossil SCM</a> 代替 Github  進行分散式版次管理, 只有在需要將所完成的倉儲版本送到 Github  時才需要連線上廣域網路.</p>
+<p><span>程式開發架構:</span></p>
+<p style="padding-left: 30px;"><span>利用  <a href="https://www.virtualbox.org/">Virtualbox</a> 安裝 pyslvs, uwsgi, fossil_scm 以及 squid 伺服器的 <a href="https://drive.google.com/open?id=1YnOxs0q95JcSSx2XABNNQ1S4k8qw8Vjk">Ubuntu 18.04.vdi 下載</a><span> (12GB) 後, 就可以在 Windows 10 環境下配置虛擬的 <a href="https://github.com/mdecourse/cmsimde">CMSiMDE</a> 動態主機、<a href="https://fossil-scm.org">Fossil SCM</a> 伺服器、<a href="https://github.com/KmolYuan/Pyslvs-UI">Pyslvs</a> 、<a href="http://www.coppeliarobotics.com/">V-rep</a> 、<a href="https://cyberbotics.com/">Webots</a> 套件與 <a href="http://www.squid-cache.org/">Squid</a> 代理主機.</span></span></p>
+<p style="padding-left: 30px;"><span><span>此一架構的程式開發標的, 即是要結合近端的瀏覽器、手機、平板介面與各種伺服器, 整合成一套機電資軟硬體系統, 前端的程式套件主要利用 <a href="https://dart.dev/">Dart</a> 開發, 負責擷取設計參數 (包含文字與數字內容, 以及靜態與動態影像等), 而後端的伺服器則包含 C/C++/Python (<a href="https://cython.org/">Cython</a>) 程式所開發的 CAD/CAE/CAM 機械設計運算核心.  透過數學運算與機械設計製造原理分析後, 將結果送回前端的使用者介面, 或依照前端介面的參數指示, 進行後端機電資實體系統的作動.</span></span></p>
+<p style="padding-left: 30px;"><span><span>範例:</span></span></p>
+<p style="padding-left: 60px;"><span><span><a href="http://mde.tw/cad2019/content/Task1.html">http://mde.tw/cad2019/content/Task1.html</a> 中利用瀏覽器連線到 Python 與 <a href="https://github.com/pallets/flask">Flask</a> 框架所建立的伺服器程式後, 可以滑鼠點擊前後左右圖像, 從伺服器的特定埠號送出控制訊號, 用來控制遠端 <a href="http://www.coppeliarobotics.com/">V-rep</a> 模擬系統中的行走車.</span></span></p>
+<p style="padding-left: 60px;">本課程的目標之一, 就是希望利用 <a href="https://dart.dev/">Dart</a> 開發出能夠取代上列 Python 前端程式介面, 並延伸至手機與平板介面, 以便更有效對虛擬或實體的機電資系統進行控制或雙向資訊互動.</p>
+<p style="padding-left: 60px;"></p>
+<br />About << <a href='About.html'>Previous</a> <a href='Design Theory.html'>Next</a> >> Design Theory</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

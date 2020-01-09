@@ -1,0 +1,363 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2019 Fall 計算機程式課程網頁</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2019 Fall 計算機程式課程網頁</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2019 Fall 計算機程式課程網頁</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='課程簡介.html'>課程簡介</a><ul class='dropdown'><li><a href='Design Theory.html'>Design Theory</a><li><a href='Abstract Thinking.html'>Abstract Thinking</a><li><a href='Computer Algorithms.html'>Computer Algorithms</a></li></ul><li><a href='課程表單.html'>課程表單</a><li><a href='Windows Notebook.html'>Windows Notebook</a><li><a href='Ubuntu Notebook.html'>Ubuntu Notebook</a><li class='has-children'><a href='Mac Notebook.html'>Mac Notebook</a><ul class='dropdown'><li><a href='Mac SSH 連線.html'>Mac SSH 連線</a></li></ul><li><a href='亂數分組.html'>亂數分組</a><li><a href='FFmpeg.html'>FFmpeg</a><li><a href='QandA.html'>QandA</a><li class='has-children'><a href='USB 隨身碟.html'>USB 隨身碟</a><ul class='dropdown'><li><a href='USB 程式系統.html'>USB 程式系統</a><li><a href='Ubuntu 伺服器.html'>Ubuntu 伺服器</a></li></ul><li><a href='課程筆記.html'>課程筆記</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li><a href='協同議題.html'>協同議題</a><li><a href='Task1.html'>Task1</a><li class='has-children'><a href='Task2.html'>Task2</a><ul class='dropdown'><li><a href='Math.html'>Math</a><li><a href='Dart2 基本語法.html'>Dart2 基本語法</a><li><a href='Dart Tour.html'>Dart Tour</a><li><a href='Unit Converter.html'>Unit Converter</a><li><a href='SciTE setup.html'>SciTE setup</a><li><a href='Dart FFI.html'>Dart FFI</a><li><a href='Cango Library.html'>Cango Library</a></li></ul><li class='has-children'><a href='Task3.html'>Task3</a><ul class='dropdown'><li><a href='Batch Command.html'>Batch Command</a><li><a href='Temp Conv.html'>Temp Conv</a><li><a href='Five-pointed_star.html'>Five-pointed_star</a><li><a href='Tetris.html'>Tetris</a></li></ul><li><a href='Task4.html'>Task4</a><li><a href='Project.html'>Project</a></li></ul><li class='has-children'><a href='Github.html'>Github</a><ul class='dropdown'><li><a href='Github Guide.html'>Github Guide</a><li class='has-children'><a href='Fossil SCM.html'>Fossil SCM</a><ul class='dropdown'><li><a href='Fossil 伺服器.html'>Fossil 伺服器</a><li><a href='Fossil 操作.html'>Fossil 操作</a><li><a href='Fossil 指令.html'>Fossil 指令</a></li></li></ul></ul><li class='has-children'><a href='DartLang.html'>DartLang</a><ul class='dropdown'><li><a href='Dart2 Spec.html'>Dart2 Spec</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Documentation.html'>Documentation</a><li><a href='Python.html'>Python</a><li class='has-children'><a href='Javascript.html'>Javascript</a><ul class='dropdown'><li><a href='JS examples.html'>JS examples</a><li><a href='node.js.html'>node.js</a><li><a href='GCS.html'>GCS</a></li></ul><li class='has-children'><a href='Ebooks.html'>Ebooks</a><ul class='dropdown'><li><a href='Practical Flutter.html'>Practical Flutter</a><li><a href='Quick Dart.html'>Quick Dart</a></li></ul><li class='has-children'><a href='Flutter.html'>Flutter</a><ul class='dropdown'><li><a href='Flutter Mobile.html'>Flutter Mobile</a><li><a href='Flutter Web.html'>Flutter Web</a></li></ul><li class='has-children'><a href='Dart.html'>Dart</a><ul class='dropdown'><li><a href='Dart on Server.html'>Dart on Server</a><li><a href='DartPad.html'>DartPad</a><li><a href='petitparse.html'>petitparse</a><li><a href='MOCAD.html'>MOCAD</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Dart on Server << <a href='Dart on Server.html'>Previous</a> <a href='petitparse.html'>Next</a> >> petitparse<br /><h1>DartPad</h1>
+<p style="padding-left: 30px;"><a href="https://dart.dev/tools/dartpad">https://dart.dev/tools/dartpad</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/dart-lang/dart-pad">https://github.com/dart-lang/dart-pad</a></p>
+<p style="padding-left: 30px;"><a href="https://dart.dev/tutorials/web/low-level-html/remove-elements">https://dart.dev/tutorials/web/low-level-html/remove-elements</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/dart-lang/dart-pad/issues/1129">https://github.com/dart-lang/dart-pad/issues/1129</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/grpc/grpc-dart">https://github.com/grpc/grpc-dart</a></p>
+<p>Dartpad 的執行需要 <a href="https://github.com/dart-lang/dart-services">https://github.com/dart-lang/dart-services</a>, (所需設定位於 <a href="https://github.com/mdecourse/dartpad/blob/master/lib/services/common.dart">https://github.com/mdecourse/dartpad/blob/master/lib/services/common.dart</a>, 若需全部在近端使用 dartpad, 必須修改設定, 並自行啟動 dart-services), 因此使用跨網域啟動 dartpad 的 WWW 伺服器需要允許 <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">https://en.wikipedia.org/wiki/Cross-origin_resource_sharing</a>, 同時在 dartpad 中提供資料的其他 WWW 伺服器也需要支援 CORS.</p>
+<p>為了讓 CMSiMDE 能夠全域支援 CORS, 必須以 python -m pip install flask_cors 安裝 flask_cors, 並且在 CMSiMDE 的 <a href="https://github.com/mdecourse/cmsimde/blob/5acf7403a8e4615edc93711dcb17a5a56438e0bc/flaskapp.py">flaskapp.py</a> 中納入 CORS.</p>
+<p>例如:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入CORS
+# python -m pip install flask_cors
+from flask_cors import CORS
+
+# 其他原始碼
+
+app = Flask(__name__)
+CORS(app, support_credentials=False)
+
+# 其他原始碼</pre>
+<p></p>
+<hr/>
+<p>自行 Build dart-pad:</p>
+<p style="padding-left: 30px;">git clone <a href="https://github.com/mdecourse/dart-pad">https://github.com/mdecourse/dart-pad</a></p>
+<p>之後, 進入 dart-pad 目錄之後, 以 pub get 取得所需 dependencies</p>
+<p>然後以 webdev build 之後, 將會在 build  目錄中產生所需的相關檔案. <span>(注意: 使用 webdev.bat 時, 必須查看批次檔案中所引用的 dart 所在路徑是否正確)</span></p>
+<p>之後將 build 目錄的內容送到 <a href="https://github.com/dartpad/dartpad.github.io">https://github.com/dartpad/dartpad.github.io</a> 倉儲, 必將 master 分支內容建立為 Github Pages, 就可以得到:</p>
+<p style="padding-left: 30px;"><a href="https://dartpad.github.io">https://dartpad.github.io</a> </p>
+<p>若要自行以 Python 建立用來伺服 dartpad 的 WWW 伺服器, 必須送出 "Access-Control-Allow-Origin" header, 若採 https 則必須支援 TLS 1.2 以上的版本, 此伺服器所需的 self-signed certificate 可以利用:</p>
+<p>openssl req -x509 -new -nodes -sha256 -utf8 -days 3650 -newkey rsa:2048 -keyout localhost.key -out localhost.crt</p>
+<p>建立所需的 localhost.key 與 localhost.crt</p>
+<p>範例倉儲:</p>
+<p style="padding-left: 30px;"><a href="https://github.com/scrum-4/dartpad">https://github.com/scrum-4/dartpad</a></p>
+<p>範例 dartpad:</p>
+<p style="padding-left: 30px;"><a href="https://scrum-4.github.io/dartpad">https://scrum-4.github.io/dartpad</a> </p>
+<p>可用於伺服 dartpad 的 http-server.py:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import os
+import subprocess
+import threading
+import http.server, ssl
+
+# openssl req -x509 -new -nodes -sha256 -utf8 -days 3650 -newkey rsa:2048 -keyout localhost.key -out localhost.crt
+
+class AcaoHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
+    def end_headers(self):
+        self.send_my_headers()
+
+        http.server.SimpleHTTPRequestHandler.end_headers(self)
+
+    def send_my_headers(self):
+        self.send_header("Access-Control-Allow-Origin", "*")
+
+def domake():
+    # build directory
+    #os.chdir("./../")
+    server_address = ('localhost', 4444)
+    httpd = http.server.HTTPServer(server_address, AcaoHTTPRequestHandler)
+    httpd.socket = ssl.wrap_socket(httpd.socket,
+                                   server_side=True,
+                                   certfile='localhost.crt',
+                                   keyfile='localhost.key',
+                                   ssl_version=ssl.PROTOCOL_TLSv1_2)
+    print(os.getcwd())
+    print("4444 https server started")
+    httpd.serve_forever()
+
+# 利用執行緒執行 https 伺服器
+make = threading.Thread(target=domake)
+make.start()
+</pre>
+<p>若只需以 http 協定進行測試, 以下列程式碼伺服 Dartpad build 目錄:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from http.server import HTTPServer, SimpleHTTPRequestHandler, test
+import sys
+
+class CORSRequestHandler (SimpleHTTPRequestHandler):
+    def end_headers (self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        SimpleHTTPRequestHandler.end_headers(self)
+
+if __name__ == '__main__':
+    test(CORSRequestHandler, HTTPServer, port=int(sys.argv[1]) if len(sys.argv) &gt; 1 else 8000)</pre>
+<p>Canvas 繪圖範例</p>
+<p>main.dart</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">import 'dart:html';
+import 'dart:math' as Math;
+
+CanvasElement canvas;    
+CanvasRenderingContext2D ctx;
+int width = 200;
+int height = 200;
+
+void main() {
+  canvas = querySelector('#canvas');
+  ctx = canvas.getContext('2d');
+  
+  canvas.width = width;
+  canvas.height = height;
+  ctx.clearRect(0, 0, width, height);
+
+  ctx.beginPath();
+  ctx.arc(75, 75, 30, 0, Math.pi * 2, true); 
+  ctx.stroke();
+}</pre>
+<p>index.html</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;div id="wrapper"&gt;
+  &lt;canvas id="canvas" width="450" height="450"&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+</pre>
+<p>main.css</p>
+<pre class="brush:css;auto-links:false;toolbar:false" contenteditable="false">html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  width: 450px;
+  margin: auto;
+  border: solid thin black;
+}</pre>
+<h4>ROC Flag on Dartpad:</h4>
+<p style="padding-left: 30px;"><a href="http://mde.tw/dartpad/?id=b51f4d2a76e394421057a70e7d281b66">http://mde.tw/dartpad/?id=b51f4d2a76e394421057a70e7d281b66</a></p>
+<p>將 Dart Pad 上的 rocflag.dart, index.html 與 style.css 整合為單一網際頁面的方法:</p>
+<p>利用 dart2js 將 rocflag.dart 轉為 rocflag.js</p>
+<p style="padding-left: 30px;">dart2js -o rocflag.js rocflag.dart</p>
+<p>將 style.css 納入 index.html 中, 並導入 rocflag.js 程式.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;ROC Flag in Dart&lt;/title&gt;
+  &lt;!-- 將 dartpad 中的 style.css 放入 head 標註中 &gt;
+  &lt;style type="text/css"&gt;
+      html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrapper {
+      width: 300px;
+      margin: auto;
+      border: solid thin black;
+}
+  &lt;/style&gt;
+  &lt;!-- 將利用 dart2js 轉出的 rocflag.js 放入 script 標註中 &gt;
+  &lt;script defer src="rocflag.js" type="application/javascript"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- 將 dartpad 中 index.html 的 canvas 標註放入 body 頁面中 --&gt;
+&lt;div id="wrapper"&gt;
+  &lt;canvas id="canvas" width="300" height="200"&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p><a href="./../downloads/dart_ex/rocflag/index.html">/downloads/dart_ex/rocflag/index.html</a></p>
+<h4>自行建立 <a href="https://dartpad.github.io">https://dartpad.github.io</a> </h4>
+<p><a href="https://github.com/mdecourse/dart-pad">https://github.com/mdecourse/dart-pad</a> 為 fork 自 <a href="https://github.com/dart-lang/dart-pad">https://github.com/dart-lang/dart-pad</a> 的自有倉儲, 只須執行:</p>
+<p>cd dart-pad</p>
+<p>pub get</p>
+<p>webdev build</p>
+<p>就可以在 build  目錄中建立網際 Dartpad 所需的檔案, 由於 Dartpad 需要在全網站名稱中, 才能正確引用其下的 embedded html 檔案, 因此將上述編譯轉檔完成的 build 內容, 放入 <a href="https://github.com/dartpad/dartpad.github.io">https://github.com/dartpad/dartpad.github.io</a>, 以便建立可以正常運作的 <a href="https://dartpad.github.io">https://dartpad.github.io</a>, 之後若 <a href="https://github.com/mdecourse/dart-pad">https://github.com/mdecourse/dart-pad</a><span>  改版, 則完成編譯後再更新  <a href="https://github.com/dartpad/dartpad.github.io">https://github.com/dartpad/dartpad.github.io</a><span>, 倉儲內容即可.</span></span></p>
+<br />Dart on Server << <a href='Dart on Server.html'>Previous</a> <a href='petitparse.html'>Next</a> >> petitparse</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

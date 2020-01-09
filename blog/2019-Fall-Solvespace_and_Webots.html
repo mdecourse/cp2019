@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Solvespace 與 Webots</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://mdecourse.github.io/cp2019/blog/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://mdecourse.github.io/cp2019/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CP2019 計算機程式 Full Atom Feed" />
+          <link href="https://mdecourse.github.io/cp2019/blog/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="CP2019 計算機程式 Categories Atom Feed" />
+
+  <link href="https://mdecourse.github.io/cp2019/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://mdecourse.github.io/cp2019/blog/theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+
+  
+    <link href="https://mdecourse.github.io/cp2019/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="https://mdecourse.github.io/cp2019/blog/2019-Fall-Solvespace_and_Webots.html" rel="canonical" />
+
+        <meta name="description" content="Webots 在 2018 年底開源後, 採用 Apache License Version 2.0 授權, 對於使用 MSYS2 與 Solvespace 的機械設計工程師而言. 加上開源 CAE Range3 以及 CAM OpenCAMLib, 在 Windows...">
+
+        <meta name="author" content="yen">
+
+        <meta name="tags" content="Solvespace">
+        <meta name="tags" content="Webots">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="CP2019 計算機程式"/>
+<meta property="og:title" content="Solvespace 與 Webots"/>
+<meta property="og:description" content="Webots 在 2018 年底開源後, 採用 Apache License Version 2.0 授權, 對於使用 MSYS2 與 Solvespace 的機械設計工程師而言. 加上開源 CAE Range3 以及 CAM OpenCAMLib, 在 Windows..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://mdecourse.github.io/cp2019/blog/2019-Fall-Solvespace_and_Webots.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-11-18 11:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://mdecourse.github.io/cp2019/blog/author/yen.html">
+<meta property="article:section" content="CP"/>
+<meta property="article:tag" content="Solvespace"/>
+<meta property="article:tag" content="Webots"/>
+<meta property="og:image" content="https://mdecourse.github.io/cp2019/blog/theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Solvespace 與 Webots",
+  "headline": "Solvespace 與 Webots",
+  "datePublished": "2019-11-18 11:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "yen",
+    "url": "https://mdecourse.github.io/cp2019/blog/author/yen.html"
+  },
+  "image": "https://mdecourse.github.io/cp2019/blog/theme/images/post-bg.jpg",
+  "url": "https://mdecourse.github.io/cp2019/blog/2019-Fall-Solvespace_and_Webots.html",
+  "description": "Webots 在 2018 年底開源後, 採用 Apache License Version 2.0 授權, 對於使用 MSYS2 與 Solvespace 的機械設計工程師而言. 加上開源 CAE Range3 以及 CAM OpenCAMLib, 在 Windows..."
+}
+</script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "./../cmsimde/static/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "./../cmsimde/static/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+<!-- for LaTeX equations -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+    <!--
+
+              <li role="presentation"><a href="https://mdecourse.github.io/cp2019/blog/pages/about/">About</a></li>
+      -->
+
+            <li><a href="https://mdecourse.github.io/cp2019/blog/pages/about/index.html">About</span></a></li>
+            
+            <li><a href="https://mdecourse.github.io/cp2019/blog/archives.html">Archives</span></a></li>
+            
+            <li><a href="https://mdecourse.github.io/cp2019/blog/categories.html">Categories</span></a></li>
+            
+            <li><a href="https://mdecourse.github.io/cp2019/blog/tags.html">Tags</span></a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://mdecourse.github.io/cp2019/blog/index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Solvespace 與 Webots</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://mdecourse.github.io/cp2019/blog/author/yen.html">Yen</a>
+            | <time datetime="Mon 18 November 2019">Mon 18 November 2019</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://mdecourse.github.io/cp2019/blog/theme/images/post-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<section class="search">
+      <form class="navbar-search" action="https://mdecourse.github.io/cp2019/blog/search.html">
+      <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
+    </form>
+</section>
+
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p><a href="https://cyberbotics.com/">Webots</a> 在 2018 年底開源後, 採用 <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2.0</a> 授權, 對於使用 <a href="https://www.msys2.org/">MSYS2</a> 與 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 的機械設計工程師而言. 加上開源 CAE <a href="https://github.com/Range-Software/range3">Range3</a> 以及 CAM <a href="https://github.com/aewallin/opencamlib">OpenCAMLib</a>, 在 Windows 10 環境中進行自由工程設計與分析套件的開發, 已經越來越完整.</p>
+
+
+<p>目前的 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 可以建立適用於機構與應用分析用的零組件, 從 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 可以轉出 <a href="https://en.wikipedia.org/wiki/STL_(file_format)">STL</a> 與 <a href="https://en.wikipedia.org/wiki/VRML">WRL</a> 格式的零組件, 將 <a href="https://en.wikipedia.org/wiki/STL_(file_format)">STL</a> 轉入 <a href="http://www.coppeliarobotics.com/">V-rep</a> 之後, 可以透過 Group Divide 的功能, 轉出各自分離的定位零件, 之後再進行簡化, 使用上堪稱方便. 但是從 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 轉出的 <a href="https://en.wikipedia.org/wiki/VRML">WRL</a> 格式組件, 當轉入 <a href="https://cyberbotics.com/">Webots</a> 後, 目前則沒有工具可以輕易分割這些已經定位的零件, 因此就機構設計與分析的角度而言, 必須事先處理從 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 轉出的 <a href="https://en.wikipedia.org/wiki/VRML">WRL</a> 格式組件, 或者進入 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 的原始碼, 修改成能夠像 Siemens <a href="https://www.plm.automation.siemens.com/global/en/products/nx/">NX</a> 套件所提供的 <a href="https://en.wikipedia.org/wiki/VRML">WRL</a> 轉出功能, 直接在一個 <a href="https://en.wikipedia.org/wiki/VRML">WRL</a> 組件檔案, 分別切分出各不同零件的外型範圍.</p>
+<p>以下的 Python 程式碼, 可以初步將 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 轉出的 <a href="https://en.wikipedia.org/wiki/STL_(file_format)">STL</a> 格式組件加以切割, 分別轉出個別零件的 <a href="https://en.wikipedia.org/wiki/STL_(file_format)">STL</a> 格式檔案. 就如同在 <a href="http://www.coppeliarobotics.com/">V-rep</a> 中採用 Group Divide 的工具, 直接在場景環境中分離所需要的零件. 目前則希望可以將類似的組件分割原理, 用來處理從 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 轉出, 之後能轉入 <a href="https://cyberbotics.com/">Webots</a> 進行系統模擬的 <a href="https://en.wikipedia.org/wiki/VRML">WRL</a> 格式組立檔案.</p>
+<p>首先是 stlSplitter.py 原始碼:</p>
+<pre class="brush: python">
+#!/usr/bin/env python
+# STL splitter
+# splits a STL file containing separate objects
+#
+# copyright 2014 Francesco Santini &lt;francesco.santini@gmail.com&gt;
+#
+# based on https://github.com/cmpolis/convertSTL by Chris Polis
+# and BinarySTL https://github.com/sukhbinder/python by Sukhbinder Singh
+#
+# Released under the MIT/X license
+
+import stlRW
+import sys
+from os import path
+
+## functions
+
+# maybe insert a tolerance for floating points?
+def check_connection(tri1, tri2):
+    for v1 in tri1[0:2]:
+        for v2 in tri2[0:2]:
+            if (v1[0] == v2[0] and v1[1] == v2[1] and v1[2] == v2[2]): return True
+    return False
+
+
+if len(sys.argv) < 2:
+    print("Usage: " + sys.argv[0] + " &lt;file.stl&gt;")
+    sys.exit(-1)
+
+fname = sys.argv[1]
+
+print("Reading...")
+
+head,points,n,v1,v2,v3,isAscii = stlRW.stlRead(fname)
+
+print("Analyzing...")
+
+faceTree = []
+
+for triangleIndex in range(0, len(v1)):
+    triangle = [ v1[triangleIndex], v2[triangleIndex], v3[triangleIndex], n[triangleIndex] ]
+    connectedTo = []
+    for treeindex in range(0, len(faceTree)):
+        for face in faceTree[treeindex]:
+            if check_connection(face, triangle):
+                connectedTo.append(treeindex) # the triangle is connected to at least one triangle of the current treeIndex
+                break
+
+    if len(connectedTo) == 0:
+        # this is a triangle from a new set
+        #print "new set"
+        faceTree.append([])
+        faceTree[len(faceTree)-1].append(triangle)
+    elif len(connectedTo) == 1:
+        #print "existing set"
+        # the triangle is connected to one set
+        faceTree[connectedTo[0]].append(triangle)
+    else:
+        #print "connecting triangle"
+        #this triangle connects two branches of the tree: collapse the branches
+        faceTree[connectedTo[0]].append(triangle)
+        for i in range(len(connectedTo)-1, 0, -1):
+            faceTree[connectedTo[0]].extend(faceTree.pop(connectedTo[i]))
+
+print("Number of separate objects: ", len(faceTree))
+
+print("Writing files")
+
+origFile, origExt = path.splitext(fname)
+for i in range(0, len(faceTree)):
+    newFile = origFile + "-" + str(i+1) + origExt
+    print("Writing ", newFile)
+    n = [field[2] for field in faceTree[i]]
+    v1 = [field[0] for field in faceTree[i]] 
+    v2 = [field[1] for field in faceTree[i]] 
+    v3 = [field[2] for field in faceTree[i]]
+    stlRW.stlWrite(newFile, n, v1, v2, v3)
+</pre>
+
+<p>接著是 stlRW.py 原始碼:</p>
+<pre class="brush: python">
+# STL reader-writer
+#
+# copyright 2014 Francesco Santini &lt;francesco.santini@gmail.com&gt;
+#
+# based on https://github.com/cmpolis/convertSTL by Chris Polis
+# and BinarySTL https://github.com/sukhbinder/python by Sukhbinder Singh
+#
+# Released under the MIT/X license
+
+import numpy as np
+from struct import unpack, pack
+
+def stlReadBinary(fname):
+    fp = open(fname, 'rb')
+    Header = fp.read(80)
+    nn = fp.read(4)
+    Numtri = unpack('i', nn)[0]
+    #print nn
+    record_dtype = np.dtype([
+                  ('normals', np.float32,(3,)),  
+                  ('Vertex1', np.float32,(3,)),
+                  ('Vertex2', np.float32,(3,)),
+                  ('Vertex3', np.float32,(3,)) ,              
+                  ('atttr', '&lt;i2',(1,) )
+    ])
+    data = np.fromfile(fp , dtype = record_dtype , count =Numtri)
+    fp.close()
+
+    Normals = data['normals']
+    Vertex1= data['Vertex1']
+    Vertex2= data['Vertex2']
+    Vertex3= data['Vertex3']
+
+    p = np.append(Vertex1,Vertex2,axis=0)
+    p = np.append(p,Vertex3,axis=0) #list(v1)
+    Points =np.array(list(set(tuple(p1) for p1 in p)))
+
+    return Header,Points,Normals,Vertex1,Vertex2,Vertex3,False
+
+def stlReadAscii(fname):
+    fp = open(fname, 'r')
+    Normals = []
+    Vertex1 = []
+    Vertex2 = []
+    Vertex3 = []
+    Points = []
+    while True:
+        line = fp.readline()
+        if not line: break
+        if line.find("solid") > -1 or line.find("endfacet") > -1: continue
+        if line.find("facet normal") > -1:
+            normline = line[line.find("facet normal")+len("facet normal"):]
+            normal = np.array([float(val.strip()) for val in normline.split()])
+            Normals.append(normal)
+            vertices = []
+            fp.readline() # outer loop
+            # read vertices after normal
+            for vIndex in range(0,3):
+                vLine = fp.readline()
+                vLine = vLine[vLine.find("vertex")+len("vertex"):]
+                vertices.append(np.array([float(val.strip()) for val in vLine.split()]))
+            Vertex1.append(vertices[0])
+            Vertex2.append(vertices[1])
+            Vertex3.append(vertices[2])
+            Points.extend(vertices)
+            fp.readline() # endloop
+    return "", Points, Normals, Vertex1, Vertex2, Vertex3,True
+
+
+def stlRead(fname):
+    fp = open(fname, "r")
+    try:
+        if fp.readline().find("solid") > -1:
+            fp.close()
+            return stlReadAscii(fname)
+        else:
+            fp.close()
+            return stlReadBinary(fname)
+    except:
+        return stlReadBinary(fname)
+
+def stlWriteBinary(fname, normals, v1, v2, v3):
+    with open(fname, "wb") as fout:
+        # write 80 bytes header
+        for i in range(0, 80): fout.write(pack("&lt;c", b" "))
+        fout.write(pack("&lt;I", len(normals))) # number of triangles
+        for i in range(0, len(normals)):
+            fout.write(pack("&lt;fff", *normals[i]))
+            fout.write(pack("&lt;fff", *v1[i]))
+            fout.write(pack("&lt;fff", *v2[i]))
+            fout.write(pack("&lt;fff", *v3[i]))
+            fout.write(pack("&lt;H", 0)) # attribute
+
+def writeVector(fd, vec):
+    for v in vec:
+        fd.write("{:.7e}".format(v))
+        fd.write(" ")
+
+def stlWriteAscii(fname, normals, v1, v2, v3):
+    with open(fname, "w") as fout:
+        fout.write("solid \n")
+        for i in range(0, len(normals)):
+            fout.write("  facet normal ")
+            writeVector(fout, normals[i])
+            fout.write("\n")
+            fout.write("    outer loop\n")
+            fout.write("      vertex ")
+            writeVector(fout, v1[i])
+            fout.write("\n")
+            fout.write("      vertex ")
+            writeVector(fout, v2[i])
+            fout.write("\n")
+            fout.write("      vertex ")
+            writeVector(fout, v3[i])
+            fout.write("\n")
+            fout.write("    endloop\n")
+            fout.write("  endfacet\n")
+
+
+def stlWrite(fname, normals, v1, v2, v3, isAscii=False):
+    if isAscii:
+        stlWriteAscii(fname, normals, v1, v2, v3)
+    else:
+        stlWriteBinary(fname, normals, v1, v2, v3)
+
+# test
+if __name__ == "__main__":
+    import sys
+    fname = sys.argv[1]
+    h,p,n,v1,v2,v3,isAscii = stlRead(fname)
+    print(len(n))
+    print(v1[0])
+    stlWriteBinary("binary.stl", n, v1, v2, v3);
+    stlWriteAscii("ascii.stl", n, v1, v2, v3);
+</pre>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Solvespace 與 Webots&amp;url=https://mdecourse.github.io/cp2019/blog/2019-Fall-Solvespace_and_Webots.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mdecourse.github.io/cp2019/blog/2019-Fall-Solvespace_and_Webots.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://mdecourse.github.io/cp2019/blog/2019-Fall-Solvespace_and_Webots.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://mdecourse.github.io/cp2019/blog/tag/solvespace.html">Solvespace</a><a href="https://mdecourse.github.io/cp2019/blog/tag/webots.html">Webots</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+                <script type="text/javascript">
+                    var disqus = 'https-mdecourse-github-io-cp2019';
+                    var disqus_shortname = 'https-mdecourse-github-io-cp2019';
+                    var disqus_identifier = '/2019-Fall-Solvespace_and_Webots.html';
+                    var disqus_url = 'https://mdecourse.github.io/cp2019/blog/2019-Fall-Solvespace_and_Webots.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/2019-Fall-Solvespace_and_Webots.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <a class="post-nav-next" href="https://mdecourse.github.io/cp2019/blog/2019-Fall-Leo-Editor.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-left"></i>
+                                <h2 class="post-nav-title">Leo Editor</h2>
+                            <p class="post-nav-excerpt">Leo Editor 是一個複雜的工具, 從它的發展歷史就不難發現, 1995 年發展的源頭來自 Donald Knuth’s "CWEB system of...</p>
+                        </section>
+                    </a>
+                    <a class="post-nav-prev" href="https://mdecourse.github.io/cp2019/blog/2019-Fall-Win10-1903.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">2019 Fall CP 課程</h2>
+                            <p class="post-nav-excerpt">2019 Fall 一開始, 1903 版的 Windows 10 就大舉更新, 除了逐步去掉先前許多舊版的設定視窗, 也將系統的指令搜尋與 App 應用程式進行綁定....</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+  
+  <script type="text/javascript" src="https://mdecourse.github.io/cp2019/blog/theme/js/script.js"></script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'https-mdecourse-github-io-cp2019';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+ 
+
+
+</body>
+</html>

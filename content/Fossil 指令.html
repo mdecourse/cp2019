@@ -1,0 +1,244 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2019 Fall 計算機程式課程網頁</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2019 Fall 計算機程式課程網頁</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2019 Fall 計算機程式課程網頁</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='課程簡介.html'>課程簡介</a><ul class='dropdown'><li><a href='Design Theory.html'>Design Theory</a><li><a href='Abstract Thinking.html'>Abstract Thinking</a><li><a href='Computer Algorithms.html'>Computer Algorithms</a></li></ul><li><a href='課程表單.html'>課程表單</a><li><a href='Windows Notebook.html'>Windows Notebook</a><li><a href='Ubuntu Notebook.html'>Ubuntu Notebook</a><li class='has-children'><a href='Mac Notebook.html'>Mac Notebook</a><ul class='dropdown'><li><a href='Mac SSH 連線.html'>Mac SSH 連線</a></li></ul><li><a href='亂數分組.html'>亂數分組</a><li><a href='FFmpeg.html'>FFmpeg</a><li><a href='QandA.html'>QandA</a><li class='has-children'><a href='USB 隨身碟.html'>USB 隨身碟</a><ul class='dropdown'><li><a href='USB 程式系統.html'>USB 程式系統</a><li><a href='Ubuntu 伺服器.html'>Ubuntu 伺服器</a></li></ul><li><a href='課程筆記.html'>課程筆記</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li><a href='協同議題.html'>協同議題</a><li><a href='Task1.html'>Task1</a><li class='has-children'><a href='Task2.html'>Task2</a><ul class='dropdown'><li><a href='Math.html'>Math</a><li><a href='Dart2 基本語法.html'>Dart2 基本語法</a><li><a href='Dart Tour.html'>Dart Tour</a><li><a href='Unit Converter.html'>Unit Converter</a><li><a href='SciTE setup.html'>SciTE setup</a><li><a href='Dart FFI.html'>Dart FFI</a><li><a href='Cango Library.html'>Cango Library</a></li></ul><li class='has-children'><a href='Task3.html'>Task3</a><ul class='dropdown'><li><a href='Batch Command.html'>Batch Command</a><li><a href='Temp Conv.html'>Temp Conv</a><li><a href='Five-pointed_star.html'>Five-pointed_star</a><li><a href='Tetris.html'>Tetris</a></li></ul><li><a href='Task4.html'>Task4</a><li><a href='Project.html'>Project</a></li></ul><li class='has-children'><a href='Github.html'>Github</a><ul class='dropdown'><li><a href='Github Guide.html'>Github Guide</a><li class='has-children'><a href='Fossil SCM.html'>Fossil SCM</a><ul class='dropdown'><li><a href='Fossil 伺服器.html'>Fossil 伺服器</a><li><a href='Fossil 操作.html'>Fossil 操作</a><li><a href='Fossil 指令.html'>Fossil 指令</a></li></li></ul></ul><li class='has-children'><a href='DartLang.html'>DartLang</a><ul class='dropdown'><li><a href='Dart2 Spec.html'>Dart2 Spec</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Documentation.html'>Documentation</a><li><a href='Python.html'>Python</a><li class='has-children'><a href='Javascript.html'>Javascript</a><ul class='dropdown'><li><a href='JS examples.html'>JS examples</a><li><a href='node.js.html'>node.js</a><li><a href='GCS.html'>GCS</a></li></ul><li class='has-children'><a href='Ebooks.html'>Ebooks</a><ul class='dropdown'><li><a href='Practical Flutter.html'>Practical Flutter</a><li><a href='Quick Dart.html'>Quick Dart</a></li></ul><li class='has-children'><a href='Flutter.html'>Flutter</a><ul class='dropdown'><li><a href='Flutter Mobile.html'>Flutter Mobile</a><li><a href='Flutter Web.html'>Flutter Web</a></li></ul><li class='has-children'><a href='Dart.html'>Dart</a><ul class='dropdown'><li><a href='Dart on Server.html'>Dart on Server</a><li><a href='DartPad.html'>DartPad</a><li><a href='petitparse.html'>petitparse</a><li><a href='MOCAD.html'>MOCAD</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Fossil 操作 << <a href='Fossil 操作.html'>Previous</a> <a href='DartLang.html'>Next</a> >> DartLang<br /><h1>Fossil 指令</h1>
+<p>每一個 .fossil 在該操作系統中都存在一組管理者密碼, 若要修改特定 .fossil 檔案中所存的用戶密碼, 可以利用 fossil sql 指令.</p>
+<h4>以 fossil sql 指令擷取 .fossil 檔案內容</h4>
+<p>使用者以 fossil init foo.fossil 建立倉儲檔案後, 除了使用 sqlite3 命令檢視 fossil 倉儲內容外, 也可以利用 fossil 指令查驗倉儲資料庫檔案的內容.</p>
+<p style="padding-left: 30px;">fossil sql -R foo.fossil</p>
+<p>進入 sqlite 指令環境後, 可以利用 .schema user 查驗 user 資料表的欄位設計.</p>
+<p>以</p>
+<p style="padding-left: 30px;">select login, pw, cap from user;</p>
+<p>可以查詢目前 foo.fossil 檔案中 user 資料表 login, pw 與 cap 等3個欄位的資料內容.</p>
+<p>若要更改特定 login 登入帳號的 pw 或 cap 可以使用下列 sqlite3 SQL 語法:</p>
+<p style="padding-left: 30px;">update user set pw='mynewpassword' where login='myloginaccount';</p>
+<p style="padding-left: 30px;">update user set cap='s' where login='myloginaccount';</p>
+<hr/>
+<p>Fossil SCM 設定中, 內定的 autosync 為 on, 表示使用者若採用:</p>
+<p style="padding-left: 30px;">fossil clone <a href="https://user:password@localhost">https://user:password@</a>192.168.56.102:5443 kmol2019.fossil</p>
+<p>將遠端倉儲 clone 至近端 kmol2019.fossil 壓縮檔案後. 一旦在工作目錄中 fossil add 與 fossil commit 之後, Fossil 會自動執行後續 fossil push 的動作, 而且此一推送會同時將改版資料送到近端與工作目錄對應的 .fossil 檔案倉儲外, 也會同時將改版資料推送到 .fossil 對應的遠端倉儲中.</p>
+<p>換言之, Fossil SCM 針對從 fossil clone 開始的一連串指令執行, 會因為 settings 的差異而有不同的新增, 提交與推送流程, 假如 fossil clone 時採用:</p>
+<p style="padding-left: 30px;">fossil clone <a href="https://192.168.56.102:5443">https://192.168.56.102:5443</a> kmol2019.fossil</p>
+<p>之後, 在近端以 fossil open 解開到近端工作目錄後, 必須利用:</p>
+<p style="padding-left: 30px;">fossil push <a href="https://usesid@fossil_server_url">https://usesid@fossil_server_url</a></p>
+<p>然後輸入與 userid 對應的密碼後, 才能退送到遠端倉儲. 至於先前已經配合以:</p>
+<p style="padding-left: 30px;"><span>fossil clone </span><a href="https://user:password@localhost">https://user:password@</a><span>192.168.56.102:5443 kmol2019.fossil</span></p>
+<p>取得倉儲, 但並非以原 fossil 倉儲內建 autosync 綁定的使用者進行提交推送時, 可以透過 fossil remote-url off 切斷內建倉儲與工作目錄綁定的內建用戶資料, 然後在提交後, 以手動執行 fossil push. 意即:</p>
+<p style="padding-left: 30px;"><span>fossil push </span><a href="https://usesid@fossil_server_url/">https://usesid@fossil_server_url</a></p>
+<hr/>
+<h4>純 IPv6 環境下的 Fossil Server</h4>
+<p>針對只採用 IPv6 協定上網的電腦中啟動 Fossil Server, 使用者可以使用 ssh 協定執行 fossil clone.</p>
+<p>例如: ipv6.only.server domain 所屬的伺服器, 其操作系統僅啟用 IPv6 協定上網, 建立 Fossil Server 的模式與 IPv4 上網的伺服器相同, 但是, fossil clone 的指令則可採用 ssh 協定下的絕對倉儲路徑或相對倉儲路徑擷取遠端的倉儲檔案:</p>
+<p>以絕對倉儲路徑 fossil clone:</p>
+<p>假設 IPv6 主機上的 target.fossil 倉儲檔案位於 /home/account/repository/target.fossil, 則使用者可以利用:</p>
+<p style="padding-left: 30px;">fossil clone ssh://account@your_ipv6_only_server_url//home/account/repository/target.fossil cloned.fossil</p>
+<p>將遠端的 target.fossil 複製到近端存為 cloned.fossil 檔案, 其中特別注意到絕對路徑在 server_url 後面必須有兩個斜線.</p>
+<p>以相對倉儲路徑 fossil clone:</p>
+<p>此時假設 Fossil Server 是以 /home/account 用戶啟動, 則使用者可以利用:</p>
+<p style="padding-left: 30px;">fossil clone ssh://account@your_ipv6_only_server_url/repository/target.fossil cloned.fossil</p>
+<p>將遠端的 target.fossil 複製到近端存為 cloned.fossil 檔案, 其中特別注意到, 相對路徑除了在 server_url 後只需一個斜線, 且是以 /home/account 目錄作為相對目錄的根目錄, 使用者必須加入 /repository/target.fossil, 才能正確擷取到倉儲檔案.</p>
+<p>上述兩種 fossil clone 指令執行後, 系統會要求輸入與 account 用戶對應的 Fossil Server 密碼, 完成後就可以將遠端的倉儲檔複製到近端.</p>
+<p>附帶說明: 截至 fossil 2.2 版, 以 ssh 協定可以 fossil clone 遠端純 IPv6 主機上的倉儲, 但是卻無法以 fossil autosync 或 fossil push 將近端的版本提交推送到遠端. 因此目前的 Fossil Server 仍建議採用 IPv4/IPv6 並存的方式建立.</p>
+<p>至於 Fossil SCM 的網路連線會依照系統環境變數中 http_proxy  設定使用 Proxy Server, 若無 http_proxy 環境變數設定, 則會直接連線.</p>
+<p>也可以在 fossil clone 指令之後加上 --proxy 140.130.17.7:3128 進行連線. (IPv6 環境必須確認是否也可行)</p>
+<p>參考資料:</p>
+<p style="padding-left: 30px;"><a href="http://www.fossil-scm.org/fossil/doc/trunk/www/quickstart.wiki">http://www.fossil-scm.org/fossil/doc/trunk/www/quickstart.wiki</a></p>
+<p style="padding-left: 30px;"><a href="https://www.mail-archive.com/fossil-users@lists.fossil-scm.org/msg12114.html">https://www.mail-archive.com/fossil-users@lists.fossil-scm.org/msg12114.html</a></p>
+<p style="padding-left: 30px;"><a href="https://fossil-users.fossil-scm.narkive.com/ywA3W2pc/ssh-implementation">https://fossil-users.fossil-scm.narkive.com/ywA3W2pc/ssh-implementation</a></p>
+<p style="padding-left: 30px;"><a href="https://blog.gtwang.org/linux/linux-ssh-public-key-authentication/">https://blog.gtwang.org/linux/linux-ssh-public-key-authentication/</a></p>
+<br />Fossil 操作 << <a href='Fossil 操作.html'>Previous</a> <a href='DartLang.html'>Next</a> >> DartLang</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

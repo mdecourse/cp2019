@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Leo Editor</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://mdecourse.github.io/cp2019/blog/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://mdecourse.github.io/cp2019/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CP2019 計算機程式 Full Atom Feed" />
+          <link href="https://mdecourse.github.io/cp2019/blog/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="CP2019 計算機程式 Categories Atom Feed" />
+
+  <link href="https://mdecourse.github.io/cp2019/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://mdecourse.github.io/cp2019/blog/theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+
+  
+    <link href="https://mdecourse.github.io/cp2019/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="https://mdecourse.github.io/cp2019/blog/2019-Fall-Leo-Editor.html" rel="canonical" />
+
+        <meta name="description" content="Leo Editor 是一個複雜的工具, 從它的發展歷史就不難發現, 1995 年發展的源頭來自 Donald Knuth’s "CWEB system of Structured documentation." 而 CWEB...">
+
+        <meta name="author" content="yen">
+
+        <meta name="tags" content="Leo Editor">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="CP2019 計算機程式"/>
+<meta property="og:title" content="Leo Editor"/>
+<meta property="og:description" content="Leo Editor 是一個複雜的工具, 從它的發展歷史就不難發現, 1995 年發展的源頭來自 Donald Knuth’s "CWEB system of Structured documentation." 而 CWEB..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://mdecourse.github.io/cp2019/blog/2019-Fall-Leo-Editor.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-12-10 11:00:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://mdecourse.github.io/cp2019/blog/author/yen.html">
+<meta property="article:section" content="CP"/>
+<meta property="article:tag" content="Leo Editor"/>
+<meta property="og:image" content="https://mdecourse.github.io/cp2019/blog/theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Leo Editor",
+  "headline": "Leo Editor",
+  "datePublished": "2019-12-10 11:00:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "yen",
+    "url": "https://mdecourse.github.io/cp2019/blog/author/yen.html"
+  },
+  "image": "https://mdecourse.github.io/cp2019/blog/theme/images/post-bg.jpg",
+  "url": "https://mdecourse.github.io/cp2019/blog/2019-Fall-Leo-Editor.html",
+  "description": "Leo Editor 是一個複雜的工具, 從它的發展歷史就不難發現, 1995 年發展的源頭來自 Donald Knuth’s "CWEB system of Structured documentation." 而 CWEB..."
+}
+</script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "./../cmsimde/static/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "./../cmsimde/static/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+<!-- for LaTeX equations -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+    <!--
+
+              <li role="presentation"><a href="https://mdecourse.github.io/cp2019/blog/pages/about/">About</a></li>
+      -->
+
+            <li><a href="https://mdecourse.github.io/cp2019/blog/pages/about/index.html">About</span></a></li>
+            
+            <li><a href="https://mdecourse.github.io/cp2019/blog/archives.html">Archives</span></a></li>
+            
+            <li><a href="https://mdecourse.github.io/cp2019/blog/categories.html">Categories</span></a></li>
+            
+            <li><a href="https://mdecourse.github.io/cp2019/blog/tags.html">Tags</span></a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://mdecourse.github.io/cp2019/blog/index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Leo Editor</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://mdecourse.github.io/cp2019/blog/author/yen.html">Yen</a>
+            | <time datetime="Tue 10 December 2019">Tue 10 December 2019</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://mdecourse.github.io/cp2019/blog/theme/images/post-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<section class="search">
+      <form class="navbar-search" action="https://mdecourse.github.io/cp2019/blog/search.html">
+      <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
+    </form>
+</section>
+
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p><a href="https://leoeditor.com/">Leo Editor</a> 是一個複雜的工具, 從它的<a href="https://leoeditor.com/history.html">發展歷史</a>就不難發現, 1995 年發展的源頭來自 <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth’s</a> "CWEB system of Structured documentation." 而 CWEB 建構的目的在於讓程式開發過程更容易讓人一目了然, 換言之 <a href="https://leoeditor.com/">Leo Editor</a> 利用大綱模式所建立的 .leo, 可以讓使用者存入與計算機程式相關的許多有用資訊, 使得一只程式系統在開發過程, 可以像寫文學作品一般, 透過大綱中的各類型條目, 述說與該程式相關的各種大小故事.</p>
+
+
+<h2>導入 Leo Editor 的瓶頸</h2>
+<p>但是由於 <a href="https://leoeditor.com/">Leo Editor</a> 從採用 Python 開發至今, 已經歷 14 年, 期間為了解決各種問題, 使用許多程式技術, 以目前最新的 6.1 版來說, 過去在 5.9 版所使用, 附在各檔案中的 @settings 設定卻不再適用, 而各資料區塊, 則已經支援利用滑鼠選擇移動, 但無論功能如何強化, 許多初學者一看到 <a href="https://leoeditor.com/">Leo Editor</a>, 通常無法在第一時間了解其功用, 所以本文將試著說明就 KMOLab 的程式開發或課程推動, 是如何使用 Leo Editor.</p>
+<h2>CMSiMDE 的開發</h2>
+<p><a href="https://github.com/mdecourse/cmsimde">CMSiMDE</a> 是一套以機械設計工程使用為導向的網際內容管理系統, 開發用的 .leo 檔案位於 https://github.com/mdecourse/cmsimde/blob/master/cmsimde.leo, 其格式為 xml, 因此若多人協同使用 <a href="https://leoeditor.com/">Leo Editor</a> 開發程式, 每一位協同者都必須各自維護一個 .leo 檔案, 否則就可能被迫必須處理特定 .leo 檔案中的資料衝突, 而 xml 格式中的衝突合併, 絕對是分散式版次管理系統的使用者, 必須極力避免的難題之一.</p>
+<p>採用 <a href="https://leoeditor.com/">Leo Editor</a> 進行程式開發的第一要訣, 除了各使用者必須自行維護一個 .leo 檔案外, 還必須了解 <a href="https://leoeditor.com/">Leo Editor</a> 中的大綱內容, 並非代表所開發程式的全部內容, 而是由各使用者選擇性利用大綱指令, 將所關心的資料, 以大綱格式從外部導入, 或者直接在各開發者的 .leo 檔案, 將資料存在大綱 body 中.</p>
+<h2>Solvespace 的開發</h2>
+<p><a href="https://github.com/solvespace/solvespace">Solvespace</a> 是一套參數式 3D 零組件繪圖與設計軟體, 採用 C++ 編寫, 假如機械設計工程系大一的計算機程式課程能夠採用 <a href="https://link.springer.com/book/10.1007/978-1-4842-0007-0">Beginning C++</a> 與 <a href="https://link.springer.com/book/10.1007/978-1-4842-3366-5">Beginning C++ 17</a> 作為 Textbooks, 讓學員利用 <a href="http://www.msys2.org/">Msys2</a> 編譯並修改維護 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 的原始碼, 應該是最佳的選擇.</p>
+<p>而開發 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 的過程, 若能夠利用 Leo Editor 解析 .cpp 程式的功能, 透過下列 importer <a href="https://leoeditor.com/">Leo Editor</a> 內文程式 (即所謂的 <a href="http://leoeditor.com/basics4.html">Leo Script</a>, 將 <a href="https://github.com/solvespace/solvespace">Solvespace</a> 的原始碼自動分門別類, 轉為大鋼格式內容, 將有助於各程式模塊的解讀與修改.</p>
+<pre class="brush: python">
+# 此一 Leo Script 放在 Leo Editor body 後, 按下 Ctrl + B 就可以執行
+c.recursiveImport(
+    # 從本目錄開始進行解讀
+    dir_ = r'./',
+    # 利用 @clean 節點指令處理各受解讀的程式檔案
+    kind = '@clean',
+    # 設為 True 表示各 @clean 節點指令前會再加上一個 @, 表示會將原始碼在 Leo Editor 轉存一份, 而不會複寫原始檔案
+    safe_at_file = True,
+    # 宣告只解讀副檔名為 .cpp 的檔案
+    theTypes = ['.cpp']
+)
+</pre>
+
+<p>上述 C++ 程式開發流程也可套用到 <a href="https://github.com/Range-Software/range3">Range3</a> 開源 CAE 軟體程式的開發與應用.</p>
+<h2>機械設計與元件版次</h2>
+<p>設計經常牽涉重複流程的執行, 而且每次施行所牽涉的資料各有不同的版次, 這些軟硬體工具的版次差異, 對於參與協同設計的團隊也會產生不同程度的影響.</p>
+<p>以目前 <a href="https://lab.kmol.info/blog/">KMOLab</a> 所採用的 <a href="https://github.com/mdecourse/kmol2020">kmol2020</a> 可攜程式套件為例, Python 若升級至 3.8.1 以上, 其中的 CMSiMDE 就必須配合將 cgi.escape 換成 html.escape, 否則程式便無法執行, 而且先前從 Python2 留下的 "is not" 也被要求改為 "!=" 的語法.</p>
+<p>至於 <a href="https://leoeditor.com/">Leo Editor</a> 本身的改版, 進入 6.1 之後, 先前的 @settings 似乎隨著滑鼠拖動視窗區塊的功能升級而無法使用, 且最新的版本在 Python 3.8.1 上仍有部分 bugs 尚未處理, 因此目前的 <a href="https://github.com/mdecourse/kmol2020">kmol2020</a> 建議使用 5.9-b2 版本的 <a href="https://leoeditor.com/">Leo Editor</a>.</p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Leo Editor&amp;url=https://mdecourse.github.io/cp2019/blog/2019-Fall-Leo-Editor.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mdecourse.github.io/cp2019/blog/2019-Fall-Leo-Editor.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://mdecourse.github.io/cp2019/blog/2019-Fall-Leo-Editor.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://mdecourse.github.io/cp2019/blog/tag/leo-editor.html">Leo Editor</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+                <script type="text/javascript">
+                    var disqus = 'https-mdecourse-github-io-cp2019';
+                    var disqus_shortname = 'https-mdecourse-github-io-cp2019';
+                    var disqus_identifier = '/2019-Fall-Leo-Editor.html';
+                    var disqus_url = 'https://mdecourse.github.io/cp2019/blog/2019-Fall-Leo-Editor.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/2019-Fall-Leo-Editor.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <a class="post-nav-prev" href="https://mdecourse.github.io/cp2019/blog/2019-Fall-Solvespace_and_Webots.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">Solvespace 與 Webots</h2>
+                            <p class="post-nav-excerpt">Webots 在 2018 年底開源後, 採用 Apache License Version 2.0 授權, 對於使用 MSYS2 與 Solvespace...</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+  
+  <script type="text/javascript" src="https://mdecourse.github.io/cp2019/blog/theme/js/script.js"></script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'https-mdecourse-github-io-cp2019';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+ 
+
+
+</body>
+</html>

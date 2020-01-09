@@ -1,0 +1,295 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2019 Fall 計算機程式課程網頁</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2019 Fall 計算機程式課程網頁</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2019 Fall 計算機程式課程網頁</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='課程簡介.html'>課程簡介</a><ul class='dropdown'><li><a href='Design Theory.html'>Design Theory</a><li><a href='Abstract Thinking.html'>Abstract Thinking</a><li><a href='Computer Algorithms.html'>Computer Algorithms</a></li></ul><li><a href='課程表單.html'>課程表單</a><li><a href='Windows Notebook.html'>Windows Notebook</a><li><a href='Ubuntu Notebook.html'>Ubuntu Notebook</a><li class='has-children'><a href='Mac Notebook.html'>Mac Notebook</a><ul class='dropdown'><li><a href='Mac SSH 連線.html'>Mac SSH 連線</a></li></ul><li><a href='亂數分組.html'>亂數分組</a><li><a href='FFmpeg.html'>FFmpeg</a><li><a href='QandA.html'>QandA</a><li class='has-children'><a href='USB 隨身碟.html'>USB 隨身碟</a><ul class='dropdown'><li><a href='USB 程式系統.html'>USB 程式系統</a><li><a href='Ubuntu 伺服器.html'>Ubuntu 伺服器</a></li></ul><li><a href='課程筆記.html'>課程筆記</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li><a href='協同議題.html'>協同議題</a><li><a href='Task1.html'>Task1</a><li class='has-children'><a href='Task2.html'>Task2</a><ul class='dropdown'><li><a href='Math.html'>Math</a><li><a href='Dart2 基本語法.html'>Dart2 基本語法</a><li><a href='Dart Tour.html'>Dart Tour</a><li><a href='Unit Converter.html'>Unit Converter</a><li><a href='SciTE setup.html'>SciTE setup</a><li><a href='Dart FFI.html'>Dart FFI</a><li><a href='Cango Library.html'>Cango Library</a></li></ul><li class='has-children'><a href='Task3.html'>Task3</a><ul class='dropdown'><li><a href='Batch Command.html'>Batch Command</a><li><a href='Temp Conv.html'>Temp Conv</a><li><a href='Five-pointed_star.html'>Five-pointed_star</a><li><a href='Tetris.html'>Tetris</a></li></ul><li><a href='Task4.html'>Task4</a><li><a href='Project.html'>Project</a></li></ul><li class='has-children'><a href='Github.html'>Github</a><ul class='dropdown'><li><a href='Github Guide.html'>Github Guide</a><li class='has-children'><a href='Fossil SCM.html'>Fossil SCM</a><ul class='dropdown'><li><a href='Fossil 伺服器.html'>Fossil 伺服器</a><li><a href='Fossil 操作.html'>Fossil 操作</a><li><a href='Fossil 指令.html'>Fossil 指令</a></li></li></ul></ul><li class='has-children'><a href='DartLang.html'>DartLang</a><ul class='dropdown'><li><a href='Dart2 Spec.html'>Dart2 Spec</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Documentation.html'>Documentation</a><li><a href='Python.html'>Python</a><li class='has-children'><a href='Javascript.html'>Javascript</a><ul class='dropdown'><li><a href='JS examples.html'>JS examples</a><li><a href='node.js.html'>node.js</a><li><a href='GCS.html'>GCS</a></li></ul><li class='has-children'><a href='Ebooks.html'>Ebooks</a><ul class='dropdown'><li><a href='Practical Flutter.html'>Practical Flutter</a><li><a href='Quick Dart.html'>Quick Dart</a></li></ul><li class='has-children'><a href='Flutter.html'>Flutter</a><ul class='dropdown'><li><a href='Flutter Mobile.html'>Flutter Mobile</a><li><a href='Flutter Web.html'>Flutter Web</a></li></ul><li class='has-children'><a href='Dart.html'>Dart</a><ul class='dropdown'><li><a href='Dart on Server.html'>Dart on Server</a><li><a href='DartPad.html'>DartPad</a><li><a href='petitparse.html'>petitparse</a><li><a href='MOCAD.html'>MOCAD</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">協同議題 << <a href='協同議題.html'>Previous</a> <a href='Task2.html'>Next</a> >> Task2<br /><h1>Task1</h1>
+<h4>任務摘要</h4>
+<p style="padding-left: 30px;">本課程使用 Git 分散式版次管理系統的目的有:</p>
+<p style="padding-left: 60px;">1. 讓使用者利用 Github 儲存資料, 逐步學習如何利用分散式版次管理流程協同開發程式.</p>
+<p style="padding-left: 60px;">2. 利用 Github Pages 建立網站, 紀錄計算機程式學習歷程.</p>
+<p style="padding-left: 30px;">為了分便在 Github Pages 建立網站, 簡報與網誌, 採用 CMSiMDE 內容管理系統, 將此一系統所建立的靜態網頁、簡報與網誌, 送到 Github 倉儲建立 WWW 網站.</p>
+<p style="padding-left: 30px;">CMSiMDE 網際內容管理系統採用 Python 與 Flask, bs4, lxml, pelican, Markdownㄝflask_cors 與 Leo 等模組建立, 可以在提拱 Python 程式與相應模組的環境中, 以動態管理系統的方式執行, 也可以將內容轉為純 html, css 與 Javascript 的靜態網頁執行.</p>
+<p style="padding-left: 30px;">所謂動態內容管理系統, 就是讓 CMSiMDE 直接在伺服器中執行 Python 與相應模組, 管理者可以直接利用瀏覽器登入內容管理系統, 修改內容後, 直接呈現在網站中.</p>
+<p style="padding-left: 30px;">而靜態內容管理系統則只包含 Html, css 與 Javascript 的資料, 使用者利用 Git 分散式版次管理系統的指令操作, 將資料送到 Github 倉儲後, 由 Github Pages 所提供的 WWW 伺服器將資料轉為特定網址下的網站, 此種靜態網站無管理者登入設置, 無法直接在網站中修改資料.</p>
+<p style="padding-left: 30px;">CMSiMDE 的系統採用子模組的方式建立, 使用者必須將此倉儲設為網際內容管理系統下, 名稱為 cmsimde 目錄的子模組, 並且將 up_dir 目錄中的資料複製到使用者倉儲主目錄下, 才能夠正常運作. 動態啟動時, 必須進入 cmsimde 目錄, 以 python 啟動 wsgi.py 程式, 並用瀏覽器在 <a>https://localhost:9443</a> 中開啟動態管理系統, 管理者密碼內定為 admin.</p>
+<p style="padding-left: 30px;">當 CMSiMDE 使用者在動態系統中完成資料更動後, 送到 Github Pages 伺服之前, 必須利用 generate_pages 功能, 將位於 config/content.htm 中的資料內容, 逐一分頁轉為 content 目錄中的靜態網頁資料後, 再退回使用者的倉儲主目錄, 利用 Git 指令, 將倉儲資料提交推送到使用者的 Github 倉儲.</p>
+<p>如何編輯個人 <a href="https://github.com/mdecourse/cmsimde">CMSiMDE</a> 網頁內容:</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/qRpq9EFKcfM" width="560"></iframe></p>
+<p>如何在 CMSiMDE 網頁中加入圖片:</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/GrY5hHHmkTo" width="560"></iframe></p>
+<p>如何對操作影片加入字幕:</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/_yTtBhMZWnc" width="560"></iframe></p>
+<p>開始學習 <a href="https://dart.dev/">Dart</a>, 並利用 <a href="https://help.github.com/en/articles/creating-gists">Gist</a> 將 <a href="https://dartpad.dartlang.org/">Dartpad</a> 嵌入學員網頁:</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ATkp974alb4" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/kD2xk_A-MxE" width="560"></iframe></p>
+<h4>Task1:</h4>
+<p style="padding-left: 30px;"><span style="background-color: #ffff00;">1/5: 了解計算機程式課程如何進行, 如何評分?</span></p>
+<p style="padding-left: 60px;">課程評分比例 (包含學員自評、同組互評與教師評分等三項):</p>
+<p style="padding-left: 120px;"><a href="https://dartpad.github.io?id=d7c4f7b267d43acd6ee7f78d581c4c5c">設一甲亂數分組</a></p>
+<p><!--  ############################### --></p>
+<h4>亂數分組:</h4>
+<p>學員名單 URL: <input id="studListUrl" size="50" type="text" value="https://mde.tw/cp2019/downloads/2019fall_cp_1a_list.txt"/><br/> 每組人數: <input id="grpNum" size="3" type="text" value="10"/><br/> <input id="submit" type="submit" value="開始分組"/><br/> <textarea cols="80" id="output" rows="10"></textarea></p>
+<script src="./../downloads/dart_ex/random_grouping/random_grouping.js"></script>
+<p><!-- ############################## --></p>
+<p style="padding-left: 120px;"><a href="https://dartpad.github.io?id=8463c358dfeb477801b2c42737697e82">設一乙亂數分組</a></p>
+<p style="padding-left: 90px;">計算機程式每週自評與互評表單:<span> <a href="https://forms.gle/hztfjHLkrAaLyntv6">https://forms.gle/hztfjHLkrAaLyntv6</a></span></p>
+<p style="padding-left: 120px;">學員出席 (10%)</p>
+<p style="padding-left: 120px;">Github 倉儲與網站管理  (20%)</p>
+<p style="padding-left: 120px;">任務執行 (40%)</p>
+<p style="padding-left: 150px;">亂數分組與應用</p>
+<p style="padding-left: 150px;">靜態繪圖與應用</p>
+<p style="padding-left: 150px;"><span>動態繪圖與應用</span></p>
+<p style="padding-left: 120px;">程式開發 (30%)</p>
+<p style="padding-left: 60px;">課程計分流程:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
+根據評分表單中的 自評分數, 互評得分, 教師評分, 計算學員課程成績
+'''
+
+def diff(自評分數, 互評得分):
+    return abs(自評分數 - 互評得分)
+    
+def max(自評分數, 互評得分):
+    if 自評分數 &gt; 互評得分:
+        return 自評分數
+    else:
+        return 互評得分
+
+def 分組比分(自評分數, 互評得分):
+    if diff(自評分數, 互評得分) &lt; 5:
+        學員得分 = max(自評分數, 互評得分)
+    else:
+        學員得分 = 互評得分 - diff(自評分數, 互評得分)
+    return 學員得分
+    
+def 全班比分(學員得分, 教師評分):
+    if diff(學員得分, 教師評分) &lt; 5:
+        學員成績 = max(學員得分, 教師評分)
+    else:
+        學員成績 = 教師評分 - diff(學員得分, 教師評分)/4
+    return 學員成績
+
+def 學員成績(自評分數, 互評得分, 教師評分):
+    學員分組得分 = 分組比分(自評分數, 互評得分)
+    學員課程成績 = 全班比分(學員分組得分, 教師評分)
+    return 學員課程成績
+    
+print(學員成績(80, 70, 60))
+print(學員成績(60, 70, 80))</pre>
+<p style="padding-left: 30px;"><span style="background-color: #ffff00;">2/5: 了解電腦輔助設計室電腦硬體與網路環境</span></p>
+<p style="padding-left: 60px;">購置時間: 2016 年暑假<br/>四年保固的華碩 Skylake MD790/I7-6700<br/>Intel 第六代 Core i7/3.4GHz/8M<br/>Intel Q170 晶片組<br/>16GB DDR4/2133/288 Pin 記憶體 (8 GBx2)<br/>2 TB-SATA3 硬碟<br/>Asus MINI-GTX950-2G 顯示卡 (支援 PCIE 3.0, OpenGL 4.5, 768 個CUDA 核心數) 500瓦電源供應器<br/>USB 3.1x2 (10GB/s)<br/>USB 3.0x6 (5GB/s)<br/>USB 2.0x2 (480MB/s)<br/>群準的 EVOsys PRO/SATA 還原卡<br/>同時支援 D-sub、HDMI 及 DisplayPort 三台獨立顯示器多工作業</p>
+<p style="padding-left: 60px;">網路以 NAT IPv4 為主, 可隨時切換為 IPv6 網路連線<br/>系上 IPv4: 140.130.17.X Gateway: 254 DNS: 3, 2, Proxy: 7, 17<br/>系上 IPv6: 2001:288:6004:17::X Gateway:254DNS: 3, 2, Proxy: 7, 17<br/>中華電信 DNS: 2001:b000:168::1</p>
+<p style="padding-left: 30px;"><span style="background-color: #ffff00;">3/5: 了解如何下載使用學校所提供的教育版 Windows 10 與 MS Office 2016</span></p>
+<p style="padding-left: 60px;">在校區內所使用的電腦 (若只需下載 .iso 可以設定系上提供的 Proxy  server 後下載), 可以透過 <a href="https://software.nfu.edu.tw/">https://software.nfu.edu.tw/</a> 取得各項教育版軟體, 其中包括 Windows 操作系統與 MS Office 以及 AutoDesk 教育版相關套件.</p>
+<p style="padding-left: 60px;"><a href="https://software.nfu.edu.tw/Windows/tw/Win_Pro_Ent_Edu_N_10_1809_64bit_Chinese_Traditional.iso">Windows 10 1809.iso</a>    <span> </span><a href="https://software.nfu.edu.tw/KMS/windows_kms.bat">kms.bat</a> (每半年認證, 若在校外必須透過<span> </span><a href="https://nfucc.nfu.edu.tw/zh/download/download-network/ssl-vpn">VPN</a><span> </span>連線後進行)</p>
+<p style="padding-left: 60px;"><a href="https://software.nfu.edu.tw/Office/tw/Visio_Pro_2016_64Ch.iso">Office 2016.iso</a>   <span> </span><a href="https://software.nfu.edu.tw/KMS/Office_2016_KMS.bat">kms.bat</a> <span>(每半年認證, 若在校外必須透過</span><span><span> </span></span><a href="https://nfucc.nfu.edu.tw/zh/download/download-network/ssl-vpn">VPN</a><span><span> </span>連線後進行)</span></p>
+<p style="padding-left: 60px;"><a href="https://software.nfu.edu.tw/Autodesk/autodesk.iso">AutoDesk PDSU.iso</a> (利用 @gm 電子郵箱驗證後, 取得學生版三年使用授權)</p>
+<p style="padding-left: 60px;">當使用者位於校區外, 希望連線使用校區內的相關電腦資料, 包括下載教育版軟體或使用各項電子期刊或電子書, 可以利用 <a href="https://nfucc.nfu.edu.tw/zh/download/download-network/ssl-vpn">https://nfucc.nfu.edu.tw/zh/download/download-network/ssl-vpn</a> 連線後使用.</p>
+<p style="padding-left: 30px;"><span style="background-color: #ffff00;">4/5: 了解如何建立 USB 上的可攜程式環境</span></p>
+<p style="padding-left: 60px;"><a href="https://drive.google.com/file/d/1lNCUsmRtsl5K128Oa2lbN2ZmriXynrQP/view?usp=sharing">dartpad_based.7z</a> (登入 @gm 帳號後下載, 210 MB 解開壓縮後約 900 MB)</p>
+<p style="padding-left: 60px;">利用 python -m pip install flask_cors 安裝 flask_cors, 以便使用最新版的 CMSiMDE</p>
+<p style="padding-left: 60px;"><a href="https://drive.google.com/file/d/1oUbvEWYbWAZM6nIfhQqC8oCcb9fcCJ5F/view?usp=sharing">GitExtensions.7z</a></p>
+<p style="padding-left: 30px;"><span style="background-color: #ffff00;">5:5: 了解如何建立 Github 帳號, 如何建立 cp2019 網站</span></p>
+<p style="padding-left: 60px;"><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> </p>
+<p style="padding-left: 60px;">在此一階段, 若希望利用 SSH (Secure Shell) 模式對 Github 連線, 必須了解:</p>
+<p style="padding-left: 90px;">1. Github 支援 HTTPS 與 SSH 等兩種連線方式, 採用 HTTPS 必須推送時輸入驗證權限的帳號與密碼, 若採用 SSH 模式連線, 則透過 Github 帳號上所存放的 pub key, 與近端使用者指定位置的 private key 進行認證.</p>
+<p style="padding-left: 90px;">2. 每一個倉儲從 Github clone 下來之後, 便會將預計使用的 HTTPS 或 SSH連線的 URL 註記在 .git 目錄中的 config 檔案中</p>
+<p style="padding-left: 90px;">3. 通常利用可攜環境啟動 portablegit 之後,  SSH 所使用的 private key 路徑設定, 通常存於 y:\home\.ssh 目錄下的  config 檔案中.</p>
+<p style="padding-left: 90px;">4. 如何利用 portablegit 中的 sh.exe 建立所需的 public key 與 private key?</p>
+<p style="padding-left: 90px;">5. 必須了解 <a href="https://help.github.com/en/articles/adding-a-new-gpg-key-to-your-github-account">Github  所接受的 keys 格式</a>,<a href="https://en.wikipedia.org/wiki/Ssh-keygen#Key_formats_supported"> ssh-keygen 所支援的 keys  格式</a>, 以及如何與 <a href="https://en.wikipedia.org/wiki/PuTTY">Putty</a> 所讀取的 keys 格式互相配合.</p>
+<p style="padding-left: 90px;">6. public key 該送到 Github 的何處?</p>
+<p style="padding-left: 90px;">7. y:\home\.ssh\config  定檔案中除了宣告 private  key 所在位置外, 還必須注意個人使用多帳號與多 private keys 設定方式, 以及如何在 SSH 連線模式下設定 Proxy Server.</p>
+<p style="padding-left: 90px;">8. <a href="https://2019wcm.blogspot.com/search/label/ssh">參考資料</a></p><br />協同議題 << <a href='協同議題.html'>Previous</a> <a href='Task2.html'>Next</a> >> Task2</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

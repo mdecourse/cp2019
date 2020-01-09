@@ -1,0 +1,587 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2019 Fall 計算機程式課程網頁</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2019 Fall 計算機程式課程網頁</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2019 Fall 計算機程式課程網頁</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='課程簡介.html'>課程簡介</a><ul class='dropdown'><li><a href='Design Theory.html'>Design Theory</a><li><a href='Abstract Thinking.html'>Abstract Thinking</a><li><a href='Computer Algorithms.html'>Computer Algorithms</a></li></ul><li><a href='課程表單.html'>課程表單</a><li><a href='Windows Notebook.html'>Windows Notebook</a><li><a href='Ubuntu Notebook.html'>Ubuntu Notebook</a><li class='has-children'><a href='Mac Notebook.html'>Mac Notebook</a><ul class='dropdown'><li><a href='Mac SSH 連線.html'>Mac SSH 連線</a></li></ul><li><a href='亂數分組.html'>亂數分組</a><li><a href='FFmpeg.html'>FFmpeg</a><li><a href='QandA.html'>QandA</a><li class='has-children'><a href='USB 隨身碟.html'>USB 隨身碟</a><ul class='dropdown'><li><a href='USB 程式系統.html'>USB 程式系統</a><li><a href='Ubuntu 伺服器.html'>Ubuntu 伺服器</a></li></ul><li><a href='課程筆記.html'>課程筆記</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li><a href='協同議題.html'>協同議題</a><li><a href='Task1.html'>Task1</a><li class='has-children'><a href='Task2.html'>Task2</a><ul class='dropdown'><li><a href='Math.html'>Math</a><li><a href='Dart2 基本語法.html'>Dart2 基本語法</a><li><a href='Dart Tour.html'>Dart Tour</a><li><a href='Unit Converter.html'>Unit Converter</a><li><a href='SciTE setup.html'>SciTE setup</a><li><a href='Dart FFI.html'>Dart FFI</a><li><a href='Cango Library.html'>Cango Library</a></li></ul><li class='has-children'><a href='Task3.html'>Task3</a><ul class='dropdown'><li><a href='Batch Command.html'>Batch Command</a><li><a href='Temp Conv.html'>Temp Conv</a><li><a href='Five-pointed_star.html'>Five-pointed_star</a><li><a href='Tetris.html'>Tetris</a></li></ul><li><a href='Task4.html'>Task4</a><li><a href='Project.html'>Project</a></li></ul><li class='has-children'><a href='Github.html'>Github</a><ul class='dropdown'><li><a href='Github Guide.html'>Github Guide</a><li class='has-children'><a href='Fossil SCM.html'>Fossil SCM</a><ul class='dropdown'><li><a href='Fossil 伺服器.html'>Fossil 伺服器</a><li><a href='Fossil 操作.html'>Fossil 操作</a><li><a href='Fossil 指令.html'>Fossil 指令</a></li></li></ul></ul><li class='has-children'><a href='DartLang.html'>DartLang</a><ul class='dropdown'><li><a href='Dart2 Spec.html'>Dart2 Spec</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Documentation.html'>Documentation</a><li><a href='Python.html'>Python</a><li class='has-children'><a href='Javascript.html'>Javascript</a><ul class='dropdown'><li><a href='JS examples.html'>JS examples</a><li><a href='node.js.html'>node.js</a><li><a href='GCS.html'>GCS</a></li></ul><li class='has-children'><a href='Ebooks.html'>Ebooks</a><ul class='dropdown'><li><a href='Practical Flutter.html'>Practical Flutter</a><li><a href='Quick Dart.html'>Quick Dart</a></li></ul><li class='has-children'><a href='Flutter.html'>Flutter</a><ul class='dropdown'><li><a href='Flutter Mobile.html'>Flutter Mobile</a><li><a href='Flutter Web.html'>Flutter Web</a></li></ul><li class='has-children'><a href='Dart.html'>Dart</a><ul class='dropdown'><li><a href='Dart on Server.html'>Dart on Server</a><li><a href='DartPad.html'>DartPad</a><li><a href='petitparse.html'>petitparse</a><li><a href='MOCAD.html'>MOCAD</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Flutter Web << <a href='Flutter Web.html'>Previous</a> <a href='Dart on Server.html'>Next</a> >> Dart on Server<br /><h1>Dart</h1>
+<p style="padding-left: 30px;"><a href="https://github.com/dart-lang/markdown">https://github.com/dart-lang/markdown</a></p>
+<p style="padding-left: 30px;"><a href="https://medium.com/hackernoon/10-good-reasons-why-you-should-learn-dart-4b257708a332">https://medium.com/hackernoon/10-good-reasons-why-you-should-learn-dart-4b257708a332</a></p>
+<p style="padding-left: 30px;"><a href="https://www.theregister.co.uk/2019/11/08/google_dart_build/">https://www.theregister.co.uk/2019/11/08/google_dart_build/</a></p>
+<p style="padding-left: 30px;">Google software engineers have delivered <a href="https://dart.dev/">Dart 2.6</a>, an update to the open source programming language that provides the ability to create self-contained, native executables for the major desktop operating systems.</p>
+<p style="padding-left: 30px;">That capability comes from an extension to the Dart compiler set called dart2native, which makes it possible to turn Dart files into self-contained executables holding ahead-of-time (AOT) compiled machine code. In other words, these executables will run on machines that don't have the Dart SDK installed.</p>
+<p style="padding-left: 30px;">"With dart2native, you can create tools for the command line on macOS, Windows, or Linux using Dart," said Michael Thomsen, a Google product manager, in a <a href="https://medium.com/dartlang/dart2native-a76c815e6baf">blog post</a>.</p>
+<h4>Dart and Python flask:</h4>
+<p style="padding-left: 30px;"><a href="https://medium.com/analytics-vidhya/deploy-ml-models-using-flask-as-rest-api-and-access-via-flutter-app-7ce63d5c1f3b">https://medium.com/analytics-vidhya/deploy-ml-models-using-flask-as-rest-api-and-access-via-flutter-app-7ce63d5c1f3b</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/SHARONZACHARIA/Deploy-ML-model">https://github.com/SHARONZACHARIA/Deploy-ML-model</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/klokantech/flask-backend">https://github.com/klokantech/flask-backend</a></p>
+<h4>Dart Language</h4>
+<p style="padding-left: 30px;"><a href="https://dart.dev/guides/language/language-tour">https://dart.dev/guides/language/language-tour</a></p>
+<p style="padding-left: 30px;"><a href="https://renato.athaydes.com/posts/interesting-dart-features.html">https://renato.athaydes.com/posts/interesting-dart-features.html</a> (<a href="./../downloads/interesting_dart_features.pdf">pdf</a>)</p>
+<p style="padding-left: 30px;"><a href="https://www.raywenderlich.com/4482551-dart-basics">https://www.raywenderlich.com/4482551-dart-basics</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/smartherd/DartTutorial">https://github.com/smartherd/DartTutorial</a></p>
+<p style="padding-left: 30px;"><a href="http://jpryan.me/dartbyexample/">http://jpryan.me/dartbyexample/</a> (<a href="https://github.com/johnpryan/dartbyexample">Github</a>)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/rikulo/dquery">https://github.com/rikulo/dquery</a></p>
+<p style="padding-left: 30px;"><a href="https://pub.dev/packages/math_expressions">https://pub.dev/packages/math_expressions</a></p>
+<p style="padding-left: 30px;">blog generator in dart: <a href="https://github.com/johnpryan/tavern">https://github.com/johnpryan/tavern</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/yissachar/awesome-dart">https://github.com/yissachar/awesome-dart</a></p>
+<p style="padding-left: 30px;"><a href="https://medium.com/flutter-community/deconstructing-dart-constructors-e3b553f583ef">https://medium.com/flutter-community/deconstructing-dart-constructors-e3b553f583ef</a></p>
+<p style="padding-left: 30px;"><a href="./../downloads/Dart2-Cheatsheet.pdf">Dart2-Cheatsheet.pdf</a></p>
+<p style="padding-left: 30px;"><a href="https://translate.google.com.tw/translate?hl=zh-TW&amp;sl=ja&amp;tl=en&amp;u=https%3A%2F%2Fwww.cresc.co.jp%2Ftech%2Fjava%2FGoogle_Dart2%2Flanguage%2Foverview%2Foverview.html">Dart2 Overview</a></p>
+<p style="padding-left: 30px;"><a href="https://translate.google.com.tw/translate?hl=zh-TW&amp;sl=ja&amp;tl=en&amp;u=https%3A%2F%2Fwww.cresc.co.jp%2Ftech%2Fjava%2FGoogle_Dart2%2Fintroduction%2Fmain_page.html">Dart2 Language Basics</a></p>
+<p style="padding-left: 30px;"><a href="https://medium.com/learn-dart/how-i-learn-dart-and-flutter-ee8948cf58a5">https://medium.com/learn-dart/how-i-learn-dart-and-flutter-ee8948cf58a5</a></p>
+<p style="padding-left: 30px;"><a href="https://www.youtube.com/channel/UCrTnsT4OYZ53l0QGKqLeD5Q">https://www.youtube.com/channel/UCrTnsT4OYZ53l0QGKqLeD5Q</a></p>
+<h4>Tutorial </h4>
+<p style="padding-left: 30px;"><a href="http://thetechnocafe.com/just-enough-dart-for-flutter-tutorial-01-variables-types-and-functions/">http://thetechnocafe.com/just-enough-dart-for-flutter-tutorial-01-variables-types-and-functions/</a></p>
+<p style="padding-left: 30px;"><a href="http://thetechnocafe.com/just-enough-dart-for-flutter-tutorial-02-control-flow-and-exception-handling/">http://thetechnocafe.com/just-enough-dart-for-flutter-tutorial-02-control-flow-and-exception-handling/</a></p>
+<p style="padding-left: 30px;"><a href="http://thetechnocafe.com/just-enough-dart-for-flutter-tutorial-03-classes-and-generics/">http://thetechnocafe.com/just-enough-dart-for-flutter-tutorial-03-classes-and-generics/</a></p>
+<p style="padding-left: 30px;"><a href="http://thetechnocafe.com/just-enough-dart-for-flutter-tutorial-04-asynchronous-and-libraries/">http://thetechnocafe.com/just-enough-dart-for-flutter-tutorial-04-asynchronous-and-libraries/</a></p>
+<p style="padding-left: 30px;"><a href="https://medium.com/@lihsinplayer/dart%E5%85%A5%E9%96%80-3eb57099da48">https://medium.com/@lihsinplayer/dart%E5%85%A5%E9%96%80-3eb57099da48</a></p>
+<h4>Math and Vector</h4>
+<p style="padding-left: 30px;"><a href="https://pub.dev/packages/vector_math">https://pub.dev/packages/vector_math</a></p>
+<p style="padding-left: 30px;"><a href="https://pub.dev/packages/extended_math">https://pub.dev/packages/extended_math</a></p>
+<p style="padding-left: 30px;">利用 Dartpad 將 <a href="https://codepen.io/ggetchell/pen/KVgrYq">https://codepen.io/ggetchell/pen/KVgrYq</a> 改寫為 Dart based.</p>
+<h4>Web</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/BoldInventions/dart-webgl-tutorials">https://github.com/BoldInventions/dart-webgl-tutorials</a></p>
+<p style="padding-left: 30px;"><a href="https://api.dartlang.org/stable/2.5.0/dart-web_gl/dart-web_gl-library.html">https://api.dartlang.org/stable/2.5.0/dart-web_gl/dart-web_gl-library.html</a></p>
+<p style="padding-left: 30px;"><a href="https://codingwithjoe.com/dart-fundamentals-async-await/">https://codingwithjoe.com/dart-fundamentals-async-await/</a></p>
+<p style="padding-left: 30px;"><a href="https://dart.dev/codelabs/async-await">https://dart.dev/codelabs/async-await</a></p>
+<h4>2D Graphics</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/bp74/StageXL">https://github.com/bp74/StageXL</a></p>
+<p style="padding-left: 30px;"><a href="https://pub.dev/packages/bezier">https://pub.dev/packages/bezier</a></p>
+<h4>AI and Machine Learning</h4>
+<p style="padding-left: 30px;"><a href="https://medium.com/dartlang/announcing-dart-2-5-super-charged-development-328822024970">https://medium.com/dartlang/announcing-dart-2-5-super-charged-development-328822024970</a></p>
+<p style="padding-left: 30px;"><a href="https://towardsdatascience.com/cross-platform-on-device-ml-inference-a55b67e306b3">https://towardsdatascience.com/cross-platform-on-device-ml-inference-a55b67e306b3</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/thosakwe/tensorflow.dart">https://github.com/thosakwe/tensorflow.dart</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/gyrdym/ml_algo">https://github.com/gyrdym/ml_algo</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/YevhenKap/ai">https://github.com/YevhenKap/ai</a></p>
+<p><a href="https://www.reddit.com/r/dartlang/">https://www.reddit.com/r/dartlang/</a></p>
+<p style="padding-left: 30px;">"Dart 2 was a huge upgrade to the Dart platform. It completed the transformation from our early web roots to a mainstream programming language suitable for fast development of rich user experiences across mobile and web. Dart is somewhat unique as a language in offering both a virtual machine (VM) and compilation to both native machine code and JavaScript. This supports the differing needs of the various platforms, for both development and production."</p>
+<p style="padding-left: 30px; text-align: right;">-- <a href="https://medium.com/dartlang/announcing-dart-2-1-improved-performance-usability-9f55fca6f31a">Landing Dart 2</a></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/h6z-5d-OlcQ" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/huawCRlo9H4" width="560"></iframe></p>
+<p style="padding-left: 30px;"><a href="./../downloads/Beginning Programming with Dart.pdf">Beginning Programming with Dart.pdf</a></p>
+<p style="padding-left: 30px;"><a href="https://dart.dev/guides/language">https://dart.dev/guides/language</a></p>
+<p style="padding-left: 30px;"><a href="https://dart.dev/tools/sdk/archive">https://dart.dev/tools/sdk/archive</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/dart-lang/sdk">https://github.com/dart-lang/sdk</a></p>
+<p style="padding-left: 30px;"><a href="https://pub.dev/packages/stagehand">https://pub.dev/packages/stagehand</a></p>
+<h4>Dart News and Update:</h4>
+<p style="padding-left: 30px;"><a href="https://news.dartlang.org/">https://news.dartlang.org/</a></p>
+<h4>Dart Packages</h4>
+<p style="padding-left: 30px;"><a href="https://pub.dev/">https://pub.dev/</a></p>
+<h4>Dart Mixins</h4>
+<p style="padding-left: 30px;"><a href="https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3">https://medium.com/flutter-community/dart-what-are-mixins-3a72344011f3</a></p>
+<h4>安裝 Dart SDK</h4>
+<p style="padding-left: 30px;"><a href="https://dart.dev/get-dart">https://dart.dev/get-dart</a></p>
+<p style="padding-left: 30px;"><a href="https://storage.googleapis.com/dart-archive/channels/stable/release/2.4.1/sdk/dartsdk-windows-x64-release.zip">https://storage.googleapis.com/dart-archive/channels/stable/release/2.4.1/sdk/dartsdk-windows-x64-release.zip</a></p>
+<h4>Effective Dart</h4>
+<p style="padding-left: 30px;"><a href="https://dart.dev/guides/language/effective-dart">https://dart.dev/guides/language/effective-dart</a></p>
+<h4>async and await</h4>
+<p style="padding-left: 30px;"><a href="https://dart.dev/codelabs/async-await">https://dart.dev/codelabs/async-await</a></p>
+<h4>Dart FFI</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/dart-lang/sdk/blob/master/samples/ffi/sqlite/docs/sqlite-tutorial.md">https://github.com/dart-lang/sdk/blob/master/samples/ffi/sqlite/docs/sqlite-tutorial.md</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/mjohnsullivan/ffi">https://github.com/mjohnsullivan/ffi</a></p>
+<h4>Dart Pad</h4>
+<p style="padding-left: 30px;">embeded gist: <a href="https://gist.github.com/scrum-1/d83c705a831668f76d2a39b97c5cb1c9">https://gist.github.com/scrum-1/d83c705a831668f76d2a39b97c5cb1c9</a></p>
+<p style="padding-left: 30px;"><a href="https://dartpad.dev/embed-html.html?id=d83c705a831668f76d2a39b97c5cb1c9">https://dartpad.dev/embed-html.html?id=d83c705a831668f76d2a39b97c5cb1c9</a></p>
+<p style="padding-left: 30px;"><a href="https://webdev-angular3-dartlang-org.firebaseapp.com/tutorials/get-data/fetch-data">https://webdev-angular3-dartlang-org.firebaseapp.com/tutorials/get-data/fetch-data</a> </p>
+<h4>Hello Dart</h4>
+<p style="padding-left: 30px;"><a href="https://dartpad.dartlang.org/embed-inline.html?id=1a980b16e56b1d1781720bf7d1ffc691">https://dartpad.dartlang.org/embed-inline.html?id=1a980b16e56b1d1781720bf7d1ffc691</a></p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">void main() {
+  print("Hello, World!");
+}</pre>
+<p>另一個 Dart 範例</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">import "dart:math" as math;
+
+class Point {
+  // final 型別表示此變數只能設對應值一次, 即便在 runtime 期
+  // num 型別表示此變數可以是 int 或 float 數值
+  final num x, y;
+  Point(this.x, this.y);
+  Point.origin()
+      : x = 0,
+        y = 0;
+  num distanceTo(Point other) {
+    var dx = x - other.x;
+    var dy = y - other.y;
+    return math.sqrt(dx * dx + dy * dy);
+  }
+
+  Point operator +(Point other) =&gt; Point(x + other.x, y + other.y);
+}
+
+void main() {
+  var p1 = Point(10, 10);
+  var p2 = Point.origin();
+  var distance = p1.distanceTo(p2);
+  print(distance);
+}
+</pre>
+<h4>Dart Nullable Operator</h4>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">// assign y to x, unless y is null, 
+// otherwise assign z
+x = y ?? z;
+
+// assign y to x if x is null
+x ??= y
+
+// call foo() only if x is not null
+x?.foo();</pre>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/Mm7TPZHk_KU" width="560"></iframe></p>
+<h4>Dart 程式語言</h4>
+<p>資料來源:</p>
+<p style="padding-left: 30px;"><a href="https://dart.dev/guides/language/language-tour">https://dart.dev/guides/language/language-tour</a></p>
+<p style="padding-left: 30px;"><a href="https://da-bootcamp.firebaseapp.com/?course=start_programming_dart">https://da-bootcamp.firebaseapp.com/?course=start_programming_dart</a> </p>
+<p>每一個 Dart 程式都以小寫英文字母的 main() 主函式開始執行, 計算機程式語法中的函式與數學中的函式相同, 可以從 () 小括號中間接受輸入, 也可以產生輸出, 小括號中間空白, 表示這個函式沒有輸入的設計, 而 main 之前的 void 表示目前的函式也沒有輸出的設計.</p>
+<p>Dart 程式的執行範圍區隔與 C/C++ 等程式語法相同, 利用大括號 {} 來界定該函式的有效範圍 (註: Python 程式語法則是採用縮排, 以每四個空白鍵為單位, 每一個縮排範圍內的程式碼界定為同一區).</p>
+<p>在這個 Dart 程式中, void 是關鍵字, 而 main() 是主函式, 也是每一個 Dart 程式會首先執行的函示, 而 print() 是用來列印資料的核心函式 (core function), 在 print() 中作為輸入的 "Hello, World" 以雙引號界定的資料稱為字串 (string), 字串也可以用單引號界定.</p>
+<p>main 與 print 並不屬於關鍵字, 可以當作變數名稱, 但並不建議使用.</p>
+<p>關鍵字在程式語言的語法中稱為保留字, 具有特殊的用法與意義, 當使用者要命名變數時, 不可以使用該程式語言中所規定的關鍵字.</p>
+<p>而 Dart 程式語法中的關鍵字共有以下 60 個:</p>
+<h4>Keywords</h4>
+<p>The following table lists the words that the Dart language treats specially.</p>
+<table class="table table-striped nowrap">
+<tbody>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#abstract-classes">abstract</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#important-concepts">dynamic</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#implicit-interfaces">implements</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#importing-only-part-of-a-library">show</a> <sup alt="contextual keyword" title="contextual keyword">1</sup></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#type-test-operators">as</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#if-and-else">else</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#using-libraries">import</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#class-variables-and-methods">static</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#assert">assert</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#enumerated-types">enum</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#for-loops">in</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#extending-a-class">super</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#asynchrony-support">async</a> <sup alt="contextual keyword" title="contextual keyword">1</sup></td>
+<td><a href="https://dart.dev/guides/libraries/create-library-packages">export</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a class="external" href="https://stackoverflow.com/questions/28595501/was-the-interface-keyword-removed-from-dart">interface</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#switch-and-case">switch</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#asynchrony-support">await</a> <sup alt="limited reserved word" title="limited reserved word">3</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#extending-a-class">extends</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#type-test-operators">is</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#generators">sync</a> <sup alt="contextual keyword" title="contextual keyword">1</sup></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#break-and-continue">break</a></td>
+<td><a class="external" href="https://stackoverflow.com/questions/24929659/what-does-external-mean-in-dart">external</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#libraries-and-visibility">library</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#constructors">this</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#switch-and-case">case</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#factory-constructors">factory</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#adding-features-to-a-class-mixins">mixin</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#throw">throw</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#catch">catch</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#booleans">false</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#using-constructors">new</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#booleans">true</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#instance-variables">class</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#final-and-const">final</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#default-value">null</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#catch">try</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#final-and-const">const</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#finally">finally</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#catch">on</a> <sup alt="contextual keyword" title="contextual keyword">1</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#typedefs">typedef</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#break-and-continue">continue</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#for-loops">for</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#overridable-operators">operator</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#variables">var</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/sound-problems#the-covariant-keyword">covariant</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#functions">Function</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/libraries/create-library-packages#organizing-a-library-package">part</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a class="external" href="https://medium.com/dartlang/dart-2-legacy-of-the-void-e7afb5f44df0">void</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#switch-and-case">default</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#getters-and-setters">get</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#catch">rethrow</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#while-and-do-while">while</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#lazily-loading-a-library">deferred</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#importing-only-part-of-a-library">hide</a> <sup alt="contextual keyword" title="contextual keyword">1</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#functions">return</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#adding-features-to-a-class-mixins">with</a></td>
+</tr>
+<tr>
+<td><a href="https://dart.dev/guides/language/language-tour#while-and-do-while">do</a></td>
+<td><a href="https://dart.dev/guides/language/language-tour#if-and-else">if</a></td>
+<td><a class="external" href="https://api.dart.dev/stable/dart-core/Set-class.html">set</a> <sup alt="built-in-identifier" title="built-in-identifier">2</sup></td>
+<td><a href="https://dart.dev/guides/language/language-tour#generators">yield</a> <sup alt="limited reserved word" title="limited reserved word">3</sup></td>
+</tr>
+</tbody>
+</table>
+<p>Avoid using these words as identifiers. However, if necessary, the keywords marked with superscripts can be identifiers:</p>
+<ul>
+<li>
+<p>Words with the superscript<span> </span><strong>1</strong><span> </span>are<span> </span><strong>contextual keywords</strong>, which have meaning only in specific places. They’re valid identifiers everywhere.</p>
+</li>
+<li>
+<p>Words with the superscript<span> </span><strong>2</strong><span> </span>are<span> </span><strong>built-in identifiers</strong>. To simplify the task of porting JavaScript code to Dart, these keywords are valid identifiers in most places, but they can’t be used as class or type names, or as import prefixes.</p>
+</li>
+<li>
+<p>Words with the superscript<span> </span><strong>3</strong><span> </span>are newer, limited reserved words related to the<span> </span><a href="https://dart.dev/guides/language/language-tour#asynchrony-support">asynchrony support</a><span> </span>that was added after Dart’s 1.0 release. You can’t use<span> </span><code class="highlighter-rouge">await</code><span> </span>or<span> </span><code class="highlighter-rouge">yield</code><span> </span>as an identifier in any function body marked with<span> </span><code class="highlighter-rouge">async</code>,<span> </span><code class="highlighter-rouge">async*</code>, or<span> </span><code class="highlighter-rouge">sync*</code>.</p>
+</li>
+</ul>
+<p>All other words in the table are<span> </span><strong>reserved words</strong>, which can’t be identifiers.</p>
+<p>上述 Dart 程式段中的符號 ";" 表示該行至分號的位置為一個完整可執行段程式 (use a semicolon to tell the interpreter where your statement ends.), 這一點也與 C/C++ 程式語法相同,  (Python 程式則一般利用跳行來界定可執行段, 但也可以利用 ";" 來界定).</p>
+<h4>程式註解</h4>
+<p>Dart 程式語法支援三種註解方式:</p>
+<p>    // 這是一般的單行註解</p>
+<p>    /* 這是多行註解開始</p>
+<p>        可以橫跨多行說明文字, 程式在執行時會忽略其中內容</p>
+<p>    這是多行註解結束 */ </p>
+<p>而第三種註解則用於產生程式的說明文件檔案:</p>
+<p>    /// 這是單行的特殊的文件說明註解</p>
+<p>    /** 這是多行的文件說明註解開始</p>
+<p>        可以橫跨多行說明文字, 程式在執行時會忽略其中內容</p>
+<p>    這是多行的文件註解結束 */ </p>
+<h4>變數 (Variables)</h4>
+<p>了解 Dart 程式的基本用法, 也知道那些英文字是被設計作為保留關鍵字後, 接下來就需要了解有關程式中有關變數的命名.</p>
+<p>Variables are a basic building block of most modern programs. In short, a variable is an alias for a computer memory location, at which something of interest will be stored.</p>
+<p>Whatever is stored there is said to be the variable's value. If you've studied the basics of algebra, you might remember variables mostly as single-letter stand-ins for numbers that helped you conceptualize and solve complex equations. Dart's variables are similar but not exactly the same, as they're capable of standing in for all kinds of values: numbers, strings of characters, or even more complex structures representing people, economic transactions, or geographic locations.</p>
+<p>All declared variables in Dart are initially given the special value of null.</p>
+<p>Unlike in algebra class, the = operator in Dart does not strictly represent equivalence. It's known as the assignment operator, so x = 5 is an expression instructing the computer to assign the value 5 to a memory location named x. </p>
+<p><iframe height="315" src="https://dartpad.dartlang.org/embed-inline.html?id=1a980b16e56b1d1781720bf7d1ffc691" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/8F2uemqLwvE" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/OLjyCy-7U2U" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/7onA7LeBD0o" width="560"></iframe></p>
+<h4>型別 (Types)</h4>
+<p>推斷型別 (Inferred Types)</p>
+<p>Variables in Dart come in many different types. Some variables are meant to hold numbers, some characters, and some point to more complex values. When declaring variables, you can allow Dart to attempt to infer your variable's intended type or you can be explicit.</p>
+<p>In the last lesson, you declared your variables using the var keyword (short for "variable"), like this:</p>
+<p>    var x;</p>
+<p>When you declare a variable using var, Dart tries to infer the variable's type. If you don't initialize the new variable with a value in the same statement as the declaration, Dart has nothing on which to base an inference, so the variable is considered to be of type dynamic. As a dynamic variable, x is able to accept values of any valid type.</p>
+<p>Mixing it Up</p>
+<p>In this example, the type of the variable called x is declared but not initialized with a value, and becomes dynamic, so code like this wouldn't be a problem:</p>
+<p>    var x;<br/>    x = 5;<br/>    x = "Dart is great.";</p>
+<p>The code declares x, then instructs Dart to store a value of 5 at the memory location aliased as x. That value is an integer, a whole number with no fractional part. The next line assigns the value "Dart is great.", a string of characters, to x. That's a versatile variable.</p>
+<p>Disappearing Number Trick</p>
+<p>Try out this code:</p>
+<p>    void main() {<br/>        var x;<br/>        x = 5;<br/>        x = "Dart is great.";<br/>        print(x);<br/>    }</p>
+<p>Can you predict what will be printed? If you run the code, you'll see that "Dart is great." appears in the console. What happened to the 5? After x was declared, it was assigned the value 5, but the next instruction assigned a string of characters to x, obliterating the numeric value. Since x is of type dynamic, the code analyzer does not flag the potential issue.</p>
+<p>You Can't Do That</p>
+<p>Modify the code to look like this:</p>
+<p>    void main() {<br/>    var x = 5;<br/>    x = "Dart is great.";<br/>    print(x);<br/>    }</p>
+<p>This code causes DartPad to display an error, saying that you're mixing types. Because you've initialized x with an integer number value at the same time you declared it, Dart infers that x is supposed to hold integers from that point on. Now x is of type int.</p>
+<p>You can override Dart's inference by specifying that you want your variable to be dynamic. Try changing the declaration to look like this and see the error disappear:</p>
+<p>    dynamic x = 5;</p>
+<p>Or you could explicitly declare and initialize x as an int, which is probably the best option under most circumstances:</p>
+<p>    int x = 5;</p>
+<p>Using the int keyword, you've created a variable meant to hold integers, so if you later try to assign a string of characters to it (a String type), Dart complains. The error is back. The analyzer is just trying to keep you from shooting yourself in the foot.</p>
+<p>Errors Stop Execution</p>
+<p>Note that if you run the code with mismatched types, execution will fail. You should always eliminate all reported errors before attempting to run your code.</p>
+<p>Why Use Explicit Types?</p>
+<p>Dart was perfectly happy to let you assign any value to your variable without errors when you declared x to be of type dynamic, so why would you restrict yourself with more specific types? The language has a sound type system that's designed to help you find problems before running your code. If you intend to use x to hold integer values, like grid coordinates maybe, then it's probably a mistake to assign it a string of characters. If you use explicit type annotations, Dart can help you catch these kinds of problems before they become run-time errors—bugs.</p>
+<p>The Fix is In</p>
+<p>To fix things up, try this:</p>
+<p>    void main() {<br/>        String x = "Dart is great.";<br/>        print(x);<br/>    }</p>
+<p>Now that x is explicitly declared to be of type String, DartPad is happy, secure in the assumption that you know what you're doing. In this example, you could also have used var and allowed Dart to infer the String type from the initialization value.</p>
+<p>Hey! Why is int lowercase, but String is capitalized? This may seem like a plot to make things more confusing for you than they need to be, but really the reason lies in the way programming languages have evolved over time. Dart was built to be familiar to those coming from other languages, like Java or C++. Unlike Dart, those languages have the concept of primitive types, special types that are fundamentally supported. Primitives are typically denoted by lowercase language keywords, while complex or user-defined types are capitalized. Even though all Dart types are simply objects, and Dart has no primitives, the language designers opted for familiarity in this case. </p>
+<p>Fundamental Types</p>
+<p>There is no limit to the number of types a program may have, but there are a few types that are fundamental to Dart:</p>
+<table>
+<tbody>
+<tr>
+<th>
+<p></p>
+<p></p>
+<p>Type</p>
+</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+<tr>
+<td>int</td>
+<td>Integer (whole number)</td>
+<td>5, -13, 0</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Floating-point number (decimals)</td>
+<td>3.14, 18.0, -33.999</td>
+</tr>
+<tr>
+<td>num</td>
+<td>Integer or floating-point number</td>
+<td>5, 3.14, -13, 999.666</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>Boolean</td>
+<td>true, false</td>
+</tr>
+<tr>
+<td>String</td>
+<td>String of zero or more characters</td>
+<td>"hi", "John Smith", "X", ""</td>
+</tr>
+<tr>
+<td>List</td>
+<td>List of values in series</td>
+<td>[1, 2, 3], ["one", "two", "three"]</td>
+</tr>
+<tr>
+<td>Map</td>
+<td>Map of values by key</td>
+<td>{"x": 8, "y": 16}</td>
+</tr>
+<tr>
+<td>dynamic</td>
+<td>Any type</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Dart art 的 const 與 final 型別</p>
+<p>The "const" and "final" keywords, both of which define a variable as being a constant, a final immutable value. "final" means you can only set it once, but you can do so at runtime, while "const" means you can only set it once, but its value must be knowable at compile-time.</p>
+<h4>運算子  (Operators)</h4>
+<p>In Dart, operators instruct the computer to perform operations on operands. An operand is any value upon which an operation is to be carried out.</p>
+<p>複合賦值運算子 (Compound Assignment Operators)</p>
+<h4>字串 (Strings)</h4>
+<p>Dart 的字串連結, 可以直接兩個以上單引號字串或雙引號字串連在一起, 或者透過 "+" 加號連接多個字串.</p>
+<p>單位換算範例</p>
+<p>判斷式</p>
+<p>布林運算</p>
+<p>模數運算 (Modulo Operator)</p>
+<p>開關 (多中選一)</p>
+<p>循環迴圈 (While Loops)</p>
+<p>D0-While 迴圈</p>
+<p>For 迴圈</p>
+<p>函式</p>
+<p>函式變數</p>
+<p>函式回傳</p>
+<p>變數範圍</p>
+<p>數列 (Lists)</p>
+<p>常數</p>
+<p>Final 變數</p>
+<h4>程式範例</h4>
+<h4>Javascript interop:</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/graphicbeacon/js-dart-interop-samples">https://github.com/graphicbeacon/js-dart-interop-samples</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/matanlurey/dart_js_interop">https://github.com/matanlurey/dart_js_interop</a></p>
+<p><a href="https://github.com/dart-lang/dart-pad/wiki/Gists">https://github.com/dart-lang/dart-pad/wiki/Gists</a></p>
+<p>HttpClient 類別位於 dart:io 程式庫中, 只能在 Server 中執行.</p>
+<p style="padding-left: 30px;"><a href="https://api.dartlang.org/stable/2.1.1/dart-io/HttpClient-class.html">https://api.dartlang.org/stable/2.1.1/dart-io/HttpClient-class.html</a></p>
+<p>HttpRequest 類別位於  dart:html 程式庫中, 只能在網際 Client 中執行.</p>
+<p style="padding-left: 30px;"><a href="https://api.dartlang.org/stable/2.0.0/dart-html/HttpRequest-class.html">https://api.dartlang.org/stable/2.0.0/dart-html/HttpRequest-class.html</a></p>
+<p style="padding-left: 30px;"><a href="https://dart.dev/tutorials/web/fetch-data">https://dart.dev/tutorials/web/fetch-data</a></p>
+<p style="padding-left: 30px;"><a href="https://codeburst.io/deploying-dart-2-apps-on-heroku-27fa120f1ec4">https://codeburst.io/deploying-dart-2-apps-on-heroku-27fa120f1ec4</a></p>
+<h4>參考資料</h4>
+<p style="padding-left: 30px;"><a href="https://learnxinyminutes.com/docs/dart/?ref=hackr.io">https://learnxinyminutes.com/docs/dart/?ref=hackr.io</a></p>
+<p style="padding-left: 30px;"><a href="https://itnext.io/learn-dart-before-you-flutter-d1c0be6cf892">https://itnext.io/learn-dart-before-you-flutter-d1c0be6cf892</a></p>
+<br />Flutter Web << <a href='Flutter Web.html'>Previous</a> <a href='Dart on Server.html'>Next</a> >> Dart on Server</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

@@ -1,0 +1,417 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2019 Fall 計算機程式課程網頁</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2019 Fall 計算機程式課程網頁</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2019 Fall 計算機程式課程網頁</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='課程簡介.html'>課程簡介</a><ul class='dropdown'><li><a href='Design Theory.html'>Design Theory</a><li><a href='Abstract Thinking.html'>Abstract Thinking</a><li><a href='Computer Algorithms.html'>Computer Algorithms</a></li></ul><li><a href='課程表單.html'>課程表單</a><li><a href='Windows Notebook.html'>Windows Notebook</a><li><a href='Ubuntu Notebook.html'>Ubuntu Notebook</a><li class='has-children'><a href='Mac Notebook.html'>Mac Notebook</a><ul class='dropdown'><li><a href='Mac SSH 連線.html'>Mac SSH 連線</a></li></ul><li><a href='亂數分組.html'>亂數分組</a><li><a href='FFmpeg.html'>FFmpeg</a><li><a href='QandA.html'>QandA</a><li class='has-children'><a href='USB 隨身碟.html'>USB 隨身碟</a><ul class='dropdown'><li><a href='USB 程式系統.html'>USB 程式系統</a><li><a href='Ubuntu 伺服器.html'>Ubuntu 伺服器</a></li></ul><li><a href='課程筆記.html'>課程筆記</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li><a href='協同議題.html'>協同議題</a><li><a href='Task1.html'>Task1</a><li class='has-children'><a href='Task2.html'>Task2</a><ul class='dropdown'><li><a href='Math.html'>Math</a><li><a href='Dart2 基本語法.html'>Dart2 基本語法</a><li><a href='Dart Tour.html'>Dart Tour</a><li><a href='Unit Converter.html'>Unit Converter</a><li><a href='SciTE setup.html'>SciTE setup</a><li><a href='Dart FFI.html'>Dart FFI</a><li><a href='Cango Library.html'>Cango Library</a></li></ul><li class='has-children'><a href='Task3.html'>Task3</a><ul class='dropdown'><li><a href='Batch Command.html'>Batch Command</a><li><a href='Temp Conv.html'>Temp Conv</a><li><a href='Five-pointed_star.html'>Five-pointed_star</a><li><a href='Tetris.html'>Tetris</a></li></ul><li><a href='Task4.html'>Task4</a><li><a href='Project.html'>Project</a></li></ul><li class='has-children'><a href='Github.html'>Github</a><ul class='dropdown'><li><a href='Github Guide.html'>Github Guide</a><li class='has-children'><a href='Fossil SCM.html'>Fossil SCM</a><ul class='dropdown'><li><a href='Fossil 伺服器.html'>Fossil 伺服器</a><li><a href='Fossil 操作.html'>Fossil 操作</a><li><a href='Fossil 指令.html'>Fossil 指令</a></li></li></ul></ul><li class='has-children'><a href='DartLang.html'>DartLang</a><ul class='dropdown'><li><a href='Dart2 Spec.html'>Dart2 Spec</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Documentation.html'>Documentation</a><li><a href='Python.html'>Python</a><li class='has-children'><a href='Javascript.html'>Javascript</a><ul class='dropdown'><li><a href='JS examples.html'>JS examples</a><li><a href='node.js.html'>node.js</a><li><a href='GCS.html'>GCS</a></li></ul><li class='has-children'><a href='Ebooks.html'>Ebooks</a><ul class='dropdown'><li><a href='Practical Flutter.html'>Practical Flutter</a><li><a href='Quick Dart.html'>Quick Dart</a></li></ul><li class='has-children'><a href='Flutter.html'>Flutter</a><ul class='dropdown'><li><a href='Flutter Mobile.html'>Flutter Mobile</a><li><a href='Flutter Web.html'>Flutter Web</a></li></ul><li class='has-children'><a href='Dart.html'>Dart</a><ul class='dropdown'><li><a href='Dart on Server.html'>Dart on Server</a><li><a href='DartPad.html'>DartPad</a><li><a href='petitparse.html'>petitparse</a><li><a href='MOCAD.html'>MOCAD</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Unit Converter << <a href='Unit Converter.html'>Previous</a> <a href='Dart FFI.html'>Next</a> >> Dart FFI<br /><h1>SciTE setup</h1>
+<p>為了在 SciTE 執行 Dart 程式, 或利用 dart2js.bat 將 Dart 轉為 Javascript, 都必須將原先的</p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1lNCUsmRtsl5K128Oa2lbN2ZmriXynrQP/view?usp=sharing">dartpad_based.7z</a><span> (登入 @gm 帳號後下載 CMSiMDE 相關可攜程式環境)</span></p>
+<p>升級為:</p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1_Mfw1U8yUkYGlVcoFzpvijtRFdKgP93U/view?usp=sharing">flutter_portable_final.7z</a><span> </span><span> (登入 @gm 帳號後下載完整的 Flutter 可攜程式環境)</span></p>
+<p>目前 Dartpad 只能納入特定的網際程式庫, 若需導入其他程式庫執行 Dart, 除了在之後的 Visual Studio Code 執行 Dart 與  Flutter 程式外, 也可以設法在 SciTE 編輯器中執行.</p>
+<p>但是必須要修改 SciTE 中的 cpp.properties (<span style="background-color: #ffff00;">註: 假如 </span><span><span style="background-color: #ffff00;">data\wscite415\wscite 目錄中已經有先前設定的 dart.properties 檔案, 必須先行刪除</span>)</span>, 將 Dart 程式語言的關鍵字納入, 並且指定由 Tools-&gt;Go 對應採 dart.exe 來執行 Dart 程式. 而 Tools-&gt;Compile 則設定為透過 dart2js 將 Dart 程式轉為 Javascript 格式.</p>
+<h4>修改 SciTE cpp.properties</h4>
+<p>必須額外加入的 Dart 程式語言設定:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># for Dart 1/7
+file.patterns.dart=*.dart
+# for Dart 2/7
+filter.dart=Dart(dart)|*.dart|
+# for Dart 3/7
+*filter.dart=$(filter.dart)
+# for Dart 4/7
+lexer.$(file.patterns.dart)=cpp
+# for Dart 5/7
+*language.dart=&amp;Dart|dart||
+# for Dart 6/7
+keywordclass.dart=\
+abstract continue false new this \
+as default	final	null throw \
+assert deferred finally	operator true \
+async do for	part try \
+async* dynamic get rethrow typedef \
+await else	if return var \
+break enum	implements set void \
+case	export import static while \
+catch external in super with \
+class extends is	switch yield \
+const factory library sync* yield* 
+keywords.$(file.patterns.dart)=$(keywordclass.dart)
+# for Dart 7/7
+command.go.*.dart=dart.exe "$(FileNameExt)"
+command.compile.*.dart=dart2js -o $(FileName).js $(FileNameExt)</pre>
+<p>修改後的 <a href="./../downloads/Scite_cpp.properties_dart_added.7z">cpp.properties 下載</a> (解開壓縮後, 放入隨身系統 data\wscite415\wscite 目錄中)</p>
+<h4>Dart 一般程式執行</h4>
+<p>配置完成後, 重新啟動隨身程式系統, 利用以下 Dart 程式進行測試:</p>
+<ol>
+<li>在 y:\tmp 中建立 dart_examples\petitparser_ex 目錄</li>
+<li>利用 SciTE 建立  pubspec.yaml 檔案, 內容如下:<br/>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">name: mocad
+version: 0.0.1
+dependencies:
+  petitparser: ^2.4.0</pre>
+<p>表示接下來的程式執行, 需要導入 petitparser 2.0.0 至 2.4.0 版的程式庫.</p>
+</li>
+<li>利用命令列進入 petitparser_ex 目錄後, 執行 pub install, 表示要根據 pubspec.yaml 中的設定, 安裝對應的 petitparser 程式庫, 安裝完成後, 會在 .packages 檔案中註記安裝目錄與內容.</li>
+<li> 接著在 petitparser_ex 目錄中, 利用 SciTE 編輯器, 建立 petitparser_ex1.dart 內容如下:<br/>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">import "package:petitparser/petitparser.dart";
+ 
+main() {
+  var str = 'aa12bb23cc5';
+  var parser =
+      (digit().plus().flatten() | any().map((_) =&gt; null)).star().map((each) {
+    print(each);
+    var total = 0;
+    for (String numStr in each) {
+      if (numStr != null) {
+        total += int.parse(numStr);
+      }
+    }
+    return total;
+  });
+  var total = parser.parse(str);
+  print(total);
+}</pre>
+<p>其中, 導入步驟 3 所安裝的 petitparser 程式庫後, 執行 str 字串的解析.</p>
+</li>
+<li>最後在 SciTE 編輯器中, 以下拉式功能表 Tools-&gt;Go 執行, 將可得到下列結果:<br/>[null, null, 12, null, null, 23, null, null, 5]<br/>Success[1:12]: 40</li>
+</ol>
+<h4>Dart 網際程式執行</h4>
+<p>由於一般瀏覽器中只搭載 Javascript 解譯器, 因此下方的 Dart 網際程式, js_ex1.dart, 必須轉為 Javascript 後才能在網頁中執行:</p>
+<p>首先宣告並安裝所需的 js 程式庫, 建立 pubspec.yaml 檔案.</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">name: mocad
+version: 0.0.1
+dependencies:
+  js: any</pre>
+<p>以命令列進入範例程式目錄, 執行 pub install, 安裝 js 程式庫.</p>
+<p>建立 js_ex1.dart 後, 利用 Tools-&gt;Compile 編譯為 js_ex1.js 程式檔案.</p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">// 將 js_ex1.dart 轉為 javascript 檔案 js_ex1.js
+//dart2js -o js_ex1.js js_ex1.dart
+// 導入 package 中的程式庫
+import 'package:js/js.dart';
+
+// 宣告外部 Javascript 程式庫中的 alert 函式
+@JS()
+external void alert(String str);
+
+main(){
+    // 呼叫 alert 函式, 顯示出字串
+    alert('哈囉! 利用 dart2js 批次檔案將 dart 轉為 javascript');
+}</pre>
+<p>利用 dart2js -o js_ex1.js js_ex1.dart 轉為 Javascript, 或者可以直接在已經設定使用 dart2js 轉換 dart 程式的 SciTE 編輯器, 以 Tools-&gt;Compile 將 dart 轉為 Javascript 程式.</p>
+<p>配合網際 Dart 程式轉為 Javascript 後執行的 index.html:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;html&gt;
+&lt;body&gt;
+&lt;script src="js_ex1.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>下載上述 <a href="./../downloads/Dart_js_ex1.7z">Dart_js_ex1.7z</a> (包含 js_ex1.dart, index.html 與 pubspec.yaml 檔案)</p>
+<p>下載呼叫 Cango 程式庫的 <a href="./../downloads/Dart_js_ex2_Cango_js.7z">Dart_js_ex2.7z</a> (包含 js_ex2.dart, cango.dart, index2.html, Cango Javascript 程式庫與 pubspec.yaml 檔案)</p>
+<p>範例二以 Dart 呼叫 <a href="https://www.arc.id.au/CanvasGraphics.html">Cango Javascript 程式庫</a>, 執行正齒輪繪圖程式:</p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">import './cango.dart';
+
+import 'dart:html';
+//import 'dart:core';
+import 'dart:math' as math;
+import 'package:js/js.dart';
+
+CanvasElement canvas;
+CanvasRenderingContext2D ctx;
+
+// n 為齒數, m 為模數, pa 為壓力角
+cangoGear(int n, num m, num pa){
+    int i;
+    // pr 為節圓半徑 pitch circle radius
+    num pr = n*m/2;
+    num rb = pr*math.cos(pa*math.pi/180);
+    // tooth 為單一齒的齒形數據
+    var tooth = createGearTooth(m, n, pa);
+    // 利用齒形數據, 建立 SVGsegs 片段資料
+    var toothData = SVGsegs(tooth);
+    // 將 toothData 旋轉半齒, 讓齒形以 x 軸為對稱中心
+    // SVGsegs 自帶資料旋轉 rotate() 方法
+    //toothData = toothData.rotate(180/n);
+    // 利用 SVGsegs 自帶的 dup() 資料 duplicate 方法, 建立 gear 單齒資料
+    var gearData = toothData.dup();
+    // 利用單齒輪廓旋轉, 產生整個正齒輪外形
+    for(i=1; i&lt;n; i++){
+        //將 toothData 中的資料複製到 newTooth
+        //var newTooth = toothData.dup();
+        //配合迴圈, newTooth 的齒形資料進行旋轉, 然後利用 appendPath 方法, 將資料併入 gear
+        var newTooth = toothData.rotate(-360*i/n);
+        print(i);
+        gearData = gearData.joinPath(newTooth);
+    }
+    // rotate the tooth to put start of involute on the x axis
+    // 目前 Path 中的 pitchToBaseAngle 旋轉無法作用
+    num pitchToBaseAngle = (math.sqrt(pr*pr - rb*rb)/rb) - math.acos(rb/pr);
+    var gear = Path(gearData, {'degs':180*pitchToBaseAngle/math.pi, 'x':-rb, 'strokeColor':'red'});
+    return gear;
+}
+
+main() {
+  var cgo = Cango("canvas");
+  cgo.gridboxPadding(10, 10, 10, 10);
+  cgo.setWorldCoordsRHC(-100, -100, 300, 150);
+  // draw axes
+  cgo.drawAxes(0, 70, 0, 70,
+      {'xOrigin': 0, 'yOrigin': 0, 'fontSize': 10, 'strokeColor': 'gray'});
+  var gear = cangoGear(20, 5, 20);
+  // 必須利用 cgo.render() 顯示 Path 資料
+  cgo.render(gear);
+}
+</pre>
+<p>cango.dart 串接程式碼:</p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">@JS()
+// 宣告此為程式庫 ,名稱為 cango
+library cango;
+// 此程式庫需要導入 package 中的 js 程式庫
+import 'package:js/js.dart';
+
+@JS()
+class Cango {
+  // Cango 為外部程式庫, 在此轉為 Dart 類別
+  external factory Cango(String selector);
+  // 以下為 Cango 在外部程式庫的相關方法, 在此轉為 Dart Cango 類別的物件方法
+  external dynamic gridboxPadding(int left, int bottom, int right, int top);
+  external dynamic setWorldCoordsRHC(num vpOriginX, num vpOriginY, num spanX, num spanY);
+  external dynamic drawAxes(num xMin, num xMax, num yMin, num yMax, Map options);
+  external dynamic drawPath(List pathDef, Map options);
+  external dynamic render(var rootObj);
+  external dynamic circle(num diameter);
+  external dynamic ellipse(num width, num height);
+  external dynamic square(num width);
+  external dynamic rectangle(num width, num height, num rad);
+  external dynamic  triangle(num side);
+  external dynamic cross(num width);
+  external dynamic ex(num diagonal);
+}
+external dynamic clone(var orgItem);
+external dynamic SVGpath(String pathStr);
+
+@JS()
+class Path{
+external factory Path(var commands, var options);
+external dynamic dup();
+}
+
+
+@JS()
+class SVGsegs{
+    external factory SVGsegs(var data);
+    external toString();
+    external dynamic dup();
+    external dynamic translate(num x, num y);
+    external dynamic rotate(num deg);
+    external dynamic appendPath(var extensionData);
+    external dynamic joinPath(var extensionData);
+}
+
+// 以下為從 html Javascript 程式導入, 直接在此轉為 Dart 函式或變數宣告
+external dynamic createGearTooth(num module, int teeth, num pressureAngle);
+external dynamic rotateTooth(List inData, num rotRads);
+external dynamic Tweener(num delay, num duration, String loopStr);
+</pre>
+<p>以 dart2js 將範例轉為 Javascript 後, 執行結果如下:</p>
+<p>
+<script src="./../downloads/dart_ex/cango/Cango-15v00-min.js"></script>
+<script src="./../downloads/dart_ex/cango/CangoAxes-6v01-min.js"></script>
+<script src="./../downloads/dart_ex/cango/gearUtils-09.js"></script>
+</p>
+<p><canvas height="400" id="canvas" width="600"></canvas></p>
+<p>
+<script src="./../downloads/dart_ex/cango/js_ex2.js"></script>
+</p>
+<br />Unit Converter << <a href='Unit Converter.html'>Previous</a> <a href='Dart FFI.html'>Next</a> >> Dart FFI</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

@@ -1,0 +1,268 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>2019 Fall 計算機程式課程網頁</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2019 Fall 計算機程式課程網頁</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2019 Fall 計算機程式課程網頁</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='課程簡介.html'>課程簡介</a><ul class='dropdown'><li><a href='Design Theory.html'>Design Theory</a><li><a href='Abstract Thinking.html'>Abstract Thinking</a><li><a href='Computer Algorithms.html'>Computer Algorithms</a></li></ul><li><a href='課程表單.html'>課程表單</a><li><a href='Windows Notebook.html'>Windows Notebook</a><li><a href='Ubuntu Notebook.html'>Ubuntu Notebook</a><li class='has-children'><a href='Mac Notebook.html'>Mac Notebook</a><ul class='dropdown'><li><a href='Mac SSH 連線.html'>Mac SSH 連線</a></li></ul><li><a href='亂數分組.html'>亂數分組</a><li><a href='FFmpeg.html'>FFmpeg</a><li><a href='QandA.html'>QandA</a><li class='has-children'><a href='USB 隨身碟.html'>USB 隨身碟</a><ul class='dropdown'><li><a href='USB 程式系統.html'>USB 程式系統</a><li><a href='Ubuntu 伺服器.html'>Ubuntu 伺服器</a></li></ul><li><a href='課程筆記.html'>課程筆記</a></li></ul><li class='has-children'><a href='Tasks.html'>Tasks</a><ul class='dropdown'><li><a href='協同議題.html'>協同議題</a><li><a href='Task1.html'>Task1</a><li class='has-children'><a href='Task2.html'>Task2</a><ul class='dropdown'><li><a href='Math.html'>Math</a><li><a href='Dart2 基本語法.html'>Dart2 基本語法</a><li><a href='Dart Tour.html'>Dart Tour</a><li><a href='Unit Converter.html'>Unit Converter</a><li><a href='SciTE setup.html'>SciTE setup</a><li><a href='Dart FFI.html'>Dart FFI</a><li><a href='Cango Library.html'>Cango Library</a></li></ul><li class='has-children'><a href='Task3.html'>Task3</a><ul class='dropdown'><li><a href='Batch Command.html'>Batch Command</a><li><a href='Temp Conv.html'>Temp Conv</a><li><a href='Five-pointed_star.html'>Five-pointed_star</a><li><a href='Tetris.html'>Tetris</a></li></ul><li><a href='Task4.html'>Task4</a><li><a href='Project.html'>Project</a></li></ul><li class='has-children'><a href='Github.html'>Github</a><ul class='dropdown'><li><a href='Github Guide.html'>Github Guide</a><li class='has-children'><a href='Fossil SCM.html'>Fossil SCM</a><ul class='dropdown'><li><a href='Fossil 伺服器.html'>Fossil 伺服器</a><li><a href='Fossil 操作.html'>Fossil 操作</a><li><a href='Fossil 指令.html'>Fossil 指令</a></li></li></ul></ul><li class='has-children'><a href='DartLang.html'>DartLang</a><ul class='dropdown'><li><a href='Dart2 Spec.html'>Dart2 Spec</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Documentation.html'>Documentation</a><li><a href='Python.html'>Python</a><li class='has-children'><a href='Javascript.html'>Javascript</a><ul class='dropdown'><li><a href='JS examples.html'>JS examples</a><li><a href='node.js.html'>node.js</a><li><a href='GCS.html'>GCS</a></li></ul><li class='has-children'><a href='Ebooks.html'>Ebooks</a><ul class='dropdown'><li><a href='Practical Flutter.html'>Practical Flutter</a><li><a href='Quick Dart.html'>Quick Dart</a></li></ul><li class='has-children'><a href='Flutter.html'>Flutter</a><ul class='dropdown'><li><a href='Flutter Mobile.html'>Flutter Mobile</a><li><a href='Flutter Web.html'>Flutter Web</a></li></ul><li class='has-children'><a href='Dart.html'>Dart</a><ul class='dropdown'><li><a href='Dart on Server.html'>Dart on Server</a><li><a href='DartPad.html'>DartPad</a><li><a href='petitparse.html'>petitparse</a><li><a href='MOCAD.html'>MOCAD</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">USB 隨身碟 << <a href='USB 隨身碟.html'>Previous</a> <a href='Ubuntu 伺服器.html'>Next</a> >> Ubuntu 伺服器<br /><h1>USB 程式系統</h1>
+<p>如何利用 <a href="https://www.virtualbox.org/">Virtualbox</a> 建立虛擬主機:</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/nOmfGF_YrmU" width="560"></iframe></p>
+<h4>背景知識</h4>
+<hr/>
+<p>2019 年 Fall 計算機程式系統的前半段, 只要能上網, 各學員可以直接在 <a href="https://dartpad.github.io">https://dartpad.github.io</a> 上寫程式, 寫完後則利用 Github 帳號上的 <a href="https://help.github.com/en/articles/creating-gists">Gists</a> 儲存並引用 Dart 網際程式. </p>
+<p>但是利用 <a href="https://pages.github.com/">Github Pages</a> 建立個人的網頁時, 近端仍需要能夠執行 <a href="https://git-scm.com/download/win">Git</a> 功能, 能夠編輯文字檔案或程式檔案, 並且需要 Python3 程式環境, 並且對 Python3 安裝 <a href="https://palletsprojects.com/p/flask/">flask</a>, <a href="https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/">bs4</a>, <a href="https://pypi.org/project/lxml/">lxml</a>, <a href="https://blog.getpelican.com/">pelican</a>, <a href="https://github.com/Python-Markdown/markdown">markdown</a> 以及 <a href="https://leoeditor.com/">leo</a> 等模組.</p>
+<p>因為各學員建立網頁用的 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 網際內容管理程式, 採用 Python <a href="https://github.com/pallets/flask">Flask</a> 網際框架編寫, 而且使用 bs4 解讀網頁標註, 而且透過 lxml 將動態 html 內容轉為靜態內容, 因此要在近端利用 CMSiMDE 的動態系統編輯內容, 且轉為只含 html, javascript 以及 css 的靜態網頁, 近端程式環境就需要 Python3 加上 flask, bs4 以及 lxml 模組. (為了讓 CMSiMDE 可以跨網域存取資料, 又加上 flask_cors 模組)</p>
+<p>至於 Python3 中的 pelican 與 markdown 主要在 CMSiMDE 網際內容管理系統中, 建立網誌用, 而管理 CMSiMDE 中的網誌與網際投影系統 - reveal.js, 則需要 Leo 大綱編輯器, 因此 Python3 除了必須安裝 flask, bs4, lxml 模組外, 還需要安裝 pelican, markdown 以及 leo 模組.</p>
+<hr/>
+<h4>建立隨身碟程式系統</h4>
+<hr/>
+<p><a href="https://drive.google.com/file/d/1lNCUsmRtsl5K128Oa2lbN2ZmriXynrQP/view?usp=sharing">dartpad_based.7z</a><span> (登入 @gm 帳號後下載, 210 MB 解開壓縮後約 900 MB) 就是根據上述的背景知識, 在純 Python 環境中安裝各相關模組之後, 再利用 <a href="https://git-scm.com/download/win">Portablegit</a> 作為執行 Git 指令的系統.</span></p>
+<p><span>建立隨身碟程式系統的第一步就是確認隨身碟所使用的規格, 假如不是採用 extFAT 格式化, 之後將無法儲存大於 4GB 的單一 檔案, 這裡所建議的 USB 容量是至少 128 GB USB3.0 以上規格的隨身碟, 並且已經格式化為 extFAT 規格.</span></p>
+<p><span>只要下載 <a href="https://drive.google.com/file/d/1lNCUsmRtsl5K128Oa2lbN2ZmriXynrQP/view?usp=sharing">dartpad_based.7z</a>, 在隨身碟中解開即可 (為了使用最新版的 CMSiMDE, 必須利用 python -m pip install flask_cors 安裝 flask_cors 模組), 接下來就可以從隨身碟以 start.bat 開啟隨身程式系統, 以 stop.bat 退出系統後, 再利用 Windows 10 操作系統中的退出隨身碟指令, 就可以取出隨身碟離開.</span></p>
+<p>接下來各學員的任務就是充分了解 start.bat 以及 stop.bat 的設定, 並且熟悉有關利用 https 與 ssh 對 Github 倉儲連線的相關設定, 並且能夠在 IPv4 與 IPv6 環境下配合修改相關 Proxy 伺服器的設定, 以及各 git config 與倉儲提交身分綁定相關細節, 就可以在每週根據教學進度, 利用  <a href="https://dartpad.github.io">https://dartpad.github.io</a>  以及 <a href="https://help.github.com/en/articles/creating-gists">Github Gists</a> 連結內容, 更新自己的網站.</p>
+<hr/>
+<h4>相關議題</h4>
+<hr/>
+<p>為什麼 USB 隨身碟需要儲存單一檔案大於 4GB 的資料?</p>
+<p style="padding-left: 30px;">因為若使用 <a href="https://www.virtualbox.org/">Virtualbox</a> 建立  Windows 10 虛擬主機進行相關測試, 最小的單一檔案將大於 10GB.</p>
+<p style="padding-left: 30px;">另外, 利用 Ubuntu 18.04 三個階段的虛擬主機檔案, 從純系統的 2GB 起, 安裝 X-Win 之後就會超過 4GB, 因此將 128 GB 的隨身碟以 extFAT 格式化是必要的.</p>
+<p style="padding-left: 60px;"><a href="https://drive.google.com/open?id=1qWbtu5qioji8MO_-whcaaixMYo3S4mal">Windows 10 64 位元.vmdk 下載</a> (10GB)</p>
+<p style="padding-left: 60px;">純 <a href="https://drive.google.com/open?id=1ZyVmFvBjDL5FRZ4QmmwUDYdQzTHo5qOu">Ubuntu 18.04.vdi 下載</a> (2GB)</p>
+<p style="padding-left: 60px;">安裝 <a href="https://drive.google.com/open?id=1Y3wHAyeyUEQkE3ZzEGOYFXvhnNAZaOcK">Mate 桌面的 Ubuntu 18.04.vdi 下載</a> (7GB)</p>
+<p style="padding-left: 60px;">安裝 <a href="https://drive.google.com/open?id=1YnOxs0q95JcSSx2XABNNQ1S4k8qw8Vjk">pyslvs, uwsgi, fossil_scm 以及 squid 伺服器的 Ubuntu 18.04.vdi 下載</a> (12GB)</p>
+<p>為什麼 USB 隨身碟中的可攜程式環境可能需要有多個啟動 start.bat 環境?</p>
+<p style="padding-left: 30px;">由於每一個電腦使用環境各有不同的網路架構與設定, 因此在電腦輔助設計室與其他不同電腦使用地點, 為免除多次修改 home 目錄下的 .gitconfig 以及 home\.ssh 目錄下的 config 檔案設定, 最佳的因應方法為: 在不同電腦使用環境時, 啟動因應該地點配置的啟動 start.bat 與 home 設定內容.</p>
+<p style="padding-left: 30px;">在此必須注意的是, 不同的 start.bat 可能指到不同的 home 目錄, 而在 <a href="https://flutter.dev">Flutter</a> 手機開發流程中, <a href="https://pub.dev/flutter">pub</a> 將相關資料存入可攜系統 home 中的 pub 目錄, 可能造成此目錄容量達 1GB, 若在不同 start.bat 與 home 設定下都需要進行 <a href="https://flutter.dev">Flutter</a> 手機程式開發, 將需要較大容量的 USB隨身碟.</p>
+<p>如何將 Dart 網際程式寫在 Gists, 如何利用 <a href="https://dartpad.github.io">https://dartpad.github.io</a> 引用?</p>
+<p style="padding-left: 30px;">各學員登入 Github 之後, 從右上方下拉式功能表點選 Your Gists, 即進入個人的 Gist 區, 再點選右上方的 + 號, 就可以新增 Gist 資料, 其中可以包含 .dart, .html 與 .css 等三種檔案, 新增後即可以取得各筆 Gist 的編碼.</p>
+<p style="padding-left: 30px;">要在 Dartpad 中引用, 只需將各 Gist 檔案的編碼, 在 <a href="https://dartpad.github.io">https://dartpad.github.io</a>  中加上 ?id=編號, 例如: 引用 Gist 編號為 60ad22240eb79d2b25e2ea1bcdd8f0c6 的 Dart 程式範例, 為  <a href="https://dartpad.github.io?id=60ad22240eb79d2b25e2ea1bcdd8f0c6">https://dartpad.github.io?id=60ad22240eb79d2b25e2ea1bcdd8f0c6 </a> </p>
+<p>以 SSH 協定維護 Github 倉儲的考量. (<a href="https://drive.google.com/file/d/1ISq1TJuaZyYZnfU33l-b7ifzmO3ejlEV/view?usp=sharing">下載 putty.7z</a> SSH 連線工具組)</p>
+<p style="padding-left: 30px;">Github 倉儲的維護提供 HTTPS 與 SSH 等兩種連線模式, 使用 HTTPS 時需要在 push 時輸入帳號與密碼, 而 SSH 連線則採用公私鑰配對的方式進行認證.</p>
+<p style="padding-left: 30px;">當使用 SSH 協定維護 Github 倉儲時, 則必須注意 portablegit 所提供的 connect.ext, 因此其 <a href="https://github.com/git/git/blob/master/connect.c">https://github.com/git/git/blob/master/connect.c</a> 目前無法使用 IPv6 代理主機連線, 因此若在純 IPv6 模式下, 必須改採 <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">Putty/Plink</a> 與 <a href="https://git-scm.com/download/win">Git</a> 結合的方式進行.</p>
+<p style="padding-left: 30px;">希望在純 IPv6 模式下, 使用 IPv6/IPv4 雙支援的代理主機對 Github 連線, 必須注意三項要點:</p>
+<p style="padding-left: 30px;">要點1: 啟動時將 GIT_SSH 環境變數設為 y:\putty\plink.exe, Git 指令啟動時, 就會使用 plink.exe 以 ssh 模式對 Github 倉儲連線.</p>
+<p style="padding-left: 30px;">要點2: Github 的 SSH 與 GPG keys 設定只接受 <a href="https://en.wikipedia.org/wiki/OpenSSH">OpenSSH</a>  格式的 public key 輸入, 但是近端的  Git 指令若透過 putty 的 plink.exe 連線, 則只接受 <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA</a> 格式的 key 格式認證. 因此近端 putty 的 AUTH 設定, 必須先將 OpenSSH 格式的 keys 利用 putty 工具組中的 puttygen.exe 轉為 <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA </a>格式後才能使用.</p>
+<p style="padding-left: 30px;">要點3: Putty 將設定存在 registry,  Computer\HKEY_CURRENT_USER\Software\SimonTatham, 而且 plink.exe 可以使用 putty.exe 的 session 設定, 因此若要採用 IPv6 proxy 設定, 是以 github.com 為 putty 的 session 名稱, 然後指定 SSH 設定下的 Auth 指定 private key, 並在 PROXY 設定所使用的 HTTP 協定代理主機. 當 putty 設定 github.com session 完成後, 必須以 git 為帳號連線一次, 以便將 github.com 網站的 public key 存檔, 讓隨後的 git push 無需再對連線主機進行後續認證. (若不在 putty 先行對 github.com 主機連線, 在 plink ssh 連線下將無法儲存相關的認證檔案.)</p>
+<p style="padding-left: 30px;">啟動 start.bat 附加:</p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">REM for putty
+set GIT_HOME=%CDisk%:\portablegit\bin\
+set GIT_SSH=%Disk%:\putty\plink.exe</pre>
+<p style="padding-left: 30px;">homt/.ssh/config 設定:</p>
+<pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false"># no proxy at home
+#ProxyCommand y:/PortableGit/mingw64/bin/connect.exe -H proxy.mde.nfu.edu.tw:3128 %h %p
+# set git_ssh=y:/putty/plink.exe with auth under putty github.com session setup
+ProxyCommand y:/putty/plink.exe github.com %h %p
+ 
+Host github.com
+    User git
+    Port 22
+    Hostname github.com
+    
+    # for connect.exe need openssh key format
+    #IdentityFile "y:\home\.ssh\id_rsa_mdecourse"
+    # for plink.exe need rsa key format but set under putty github.com session
+    # plink.exe do not need the following setting
+    #IdentityFile "y:\home\.ssh\mdecourse_putty_private.ppk"
+ 
+    TCPKeepAlive yes
+    IdentitiesOnly yes
+</pre>
+<p>為什麼需要使用虛擬主機?</p>
+<p style="padding-left: 30px;">學習計算機程式編寫網際近端與遠端程式互動時, 可以利用近端的虛擬主機作為伺服器, 配置動態的 CMSiMDE 與 Fossil SCM 伺服器, 可以自行建立與 Github 相當的網際內容管理系統, 若再加上了解如何自行建立同時支援 IPv4 與 IPv6 通訊協定的 <a href="http://www.squid-cache.org/">Squid Proxy 伺服器</a>, 將可以在網際程式開發流程中學習全面的整合知識.</p>
+<p><a href="https://drive.google.com/file/d/1oUbvEWYbWAZM6nIfhQqC8oCcb9fcCJ5F/view?usp=sharing">GitExtensions.7z</a> 有何用途?</p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/viFDMwKEqy8" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/4FuI23BWrsM" width="560"></iframe></p>
+<p style="padding-left: 30px;"><a href="https://github.com/gitextensions/gitextensions">https://github.com/gitextensions/gitextensions</a> 是一個以 C# 編寫的開源 Git 指令工具, 由於當多人同時維護一個分組倉儲與網站內容時, 採取多人同步程式或網站內容的編修流程時, 經常需要使用較複雜的 Git 指令, 若使用 <a href="https://drive.google.com/file/d/1oUbvEWYbWAZM6nIfhQqC8oCcb9fcCJ5F/view?usp=sharing">GitExtensions.7z</a> 可以較簡便執行這些複雜的 Git  指令, 並且在近端進行分支合併或衝突解決時, 可以透過圖形化的介面了解各倉儲分支的內容修改情形.</p>
+<br />USB 隨身碟 << <a href='USB 隨身碟.html'>Previous</a> <a href='Ubuntu 伺服器.html'>Next</a> >> Ubuntu 伺服器</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        
