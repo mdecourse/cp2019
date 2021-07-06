@@ -2,7 +2,7 @@
         <head>
         <title>CMSiMDE</title>
         <meta charset="utf-8">
-<meta property="head" content="H3">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -134,10 +134,28 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Dart FFI << <a href='Dart FFI.html'>Previous</a> <a href='Task3.html'>Next</a> >> Task3<br /><h1>Cango Library</h1>
-<p><a href="https://www.arc.id.au/CanvasGraphics.html">https://www.arc.id.au/CanvasGraphics.html</a>  是一套利用 Javascript 編寫的 <a href="https://developer.mozilla.org/zh-TW/docs/Web/API/Canvas_API/Tutorial">Canvas 繪圖</a>程式庫.</p>
-<p>Cango user guide: <a href="https://www.arc.id.au/CangoUserGuide.html">https://www.arc.id.au/CangoUserGuide.html</a></p>
-<br />Dart FFI << <a href='Dart FFI.html'>Previous</a> <a href='Task3.html'>Next</a> >> Task3</div>
+    <div id="tipue_search_content"> <a href='About.html'>Next</a> >> About<br /><h1>2021</h1>
+<p>這是在 2021 年 Summer 所進行的更新, 1)首先將 CMSiMDE 更新.</p>
+<p>2) 接下來則是下載 <a href="https://drive.google.com/file/d/1_Mfw1U8yUkYGlVcoFzpvijtRFdKgP93U/view?usp=sharing">flutter_portable_final.7z</a> (只有 @gm 用戶可以下載) 後進行 flutter upgrade, 因為 2019 年採用 @gm 帳號下的 GDrive 儲存, 因此只能讓登入 @gm 帳號的用戶下載, 但是 2022 年 7 月之後, 教育版的 GDrive 已經有容量限制, 因此本次更新會將最新版的 Windows portable Flutter 將會轉移到 Flutter AT mde 專用 GDrive, 並且開放所有用戶下載.</p>
+<p>3) 利用 Visual Studio Code 開發 Flutter App 之前, 必須啟動 BlueStacks (本次測試第 4 與 5 版, 都可完成 APP 安裝測試), 並且啟用 Android Debug Bridge (ADB) 功能, 之後在 Flutter 隨身系統啟動後, 在命令列視窗中執行 adb connect localhost:5555, 就可以直接利用 BlueStacks 作為虛擬手機介面進行 Flutter App 的執行.</p>
+<p>4) 當 Visual Studio Code 執行時, 目前必須要啟用 IPv4 網路協定才可正常建立 App 並安裝於 BlueStacks 手機介面中, 之後必須再看看是否能夠直接在 IPv6 網路協定下正常運作.</p>
+<p> 5) 本次更新後的 Flutter 可攜系統, 總容量為 20GB. 壓縮後的大小則為 GB.</p>
+<p><a href="https://drive.google.com/file/d/1X8icOyPgABAkKHYaDLXPSoy7U7nyxqzW/view?usp=sharing">下載 Flutter_portable_20210707.7z</a> (下載 4.7 GB, 解開壓縮後約 20GB)</p>
+<p>可攜系統中的 Android sdk 容量約 7.5 GB, Flutter 與 Dart 容量約 1.6 GB, Java jdk 容量約 200MB. vscode 約 530 MB, home_mdecourse 目錄下含手機 emulator 檔案容量約 9.3 GB.</p>
+<p>6) cp2019 網頁中的 Flutter web 範例已經無法執行, dartpad.github.io 網站也必須更新版本.</p>
+<p>以下為 Flutter 可攜系統所需的啟動設定檔內容:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM for flutter
+set java_home=%Disk%:\java\jdk8u222-b10
+set ANDROID_SDK_home=%Disk%:\home_mdecourse
+set GRADLE_USER_home=%Disk%:\home_mdecourse
+set ANDROID_SDK_ROOT=%Disk%:\android\sdk
+set PUB_CACHE=%Disk%:\home_mdecourse\pub
+
+REM set _JAVA_OPTIONS=-Duser.home=%HOME%
+set path_flutter=%Disk%:\android\sdk\tools;%Disk%:\android\sdk\tools\bin;%Disk%:\android\sdk\platform-tools;%Disk%:\flutter\bin;%Disk%:\flutter\bin\cache\dart-sdk\bin;
+
+set path_vscode=%Disk%:\vscode;</pre>
+<p></p><br /> <a href='About.html'>Next</a> >> About</div>
         
     <!-- footer -->
       <div class="container">

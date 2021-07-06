@@ -1,4 +1,25 @@
-<h1>About</h1>
+<h1>2021</h1>
+<p>這是在 2021 年 Summer 所進行的更新, 1)首先將 CMSiMDE 更新.</p>
+<p>2) 接下來則是下載 <a href="https://drive.google.com/file/d/1_Mfw1U8yUkYGlVcoFzpvijtRFdKgP93U/view?usp=sharing">flutter_portable_final.7z</a> (只有 @gm 用戶可以下載) 後進行 flutter upgrade, 因為 2019 年採用 @gm 帳號下的 GDrive 儲存, 因此只能讓登入 @gm 帳號的用戶下載, 但是 2022 年 7 月之後, 教育版的 GDrive 已經有容量限制, 因此本次更新會將最新版的 Windows portable Flutter 將會轉移到 Flutter AT mde 專用 GDrive, 並且開放所有用戶下載.</p>
+<p>3) 利用 Visual Studio Code 開發 Flutter App 之前, 必須啟動 BlueStacks (本次測試第 4 與 5 版, 都可完成 APP 安裝測試), 並且啟用 Android Debug Bridge (ADB) 功能, 之後在 Flutter 隨身系統啟動後, 在命令列視窗中執行 adb connect localhost:5555, 就可以直接利用 BlueStacks 作為虛擬手機介面進行 Flutter App 的執行.</p>
+<p>4) 當 Visual Studio Code 執行時, 目前必須要啟用 IPv4 網路協定才可正常建立 App 並安裝於 BlueStacks 手機介面中, 之後必須再看看是否能夠直接在 IPv6 網路協定下正常運作.</p>
+<p> 5) 本次更新後的 Flutter 可攜系統, 總容量為 20GB. 壓縮後的大小則為 GB.</p>
+<p>下載 Flutter_portable_20210707.7z (下載 4.7 GB, 解開壓縮後約 20GB)</p>
+<p>可攜系統中的 Android sdk 容量約 7.5 GB, Flutter 與 Dart 容量約 1.6 GB, Java jdk 容量約 200MB. vscode 約 530 MB, home_mdecourse 目錄下含手機 emulator 檔案容量約 9.3 GB.</p>
+<p>6) cp2019 網頁中的 Flutter web 範例已經無法執行, dartpad.github.io 網站也必須更新版本.</p>
+<p>以下為 Flutter 可攜系統所需的啟動設定檔內容:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM for flutter
+set java_home=%Disk%:\java\jdk8u222-b10
+set ANDROID_SDK_home=%Disk%:\home_mdecourse
+set GRADLE_USER_home=%Disk%:\home_mdecourse
+set ANDROID_SDK_ROOT=%Disk%:\android\sdk
+set PUB_CACHE=%Disk%:\home_mdecourse\pub
+
+REM set _JAVA_OPTIONS=-Duser.home=%HOME%
+set path_flutter=%Disk%:\android\sdk\tools;%Disk%:\android\sdk\tools\bin;%Disk%:\android\sdk\platform-tools;%Disk%:\flutter\bin;%Disk%:\flutter\bin\cache\dart-sdk\bin;
+
+set path_vscode=%Disk%:\vscode;</pre>
+<p></p><h1>About</h1>
 <p>身為二十一世紀的機械設計工程師, 由 Dart 入門, 以 Python 建立設計抽象模型 Prototypes, 採用 C 執行機電控制, 然後在 Javascript 的網際與 Flutter 的手機介面中, 運行 Cython 以及 N-API 轉出的核心 C++ 編譯碼, 應該成為基本功.</p>
 <h4>計算機程式建議學習順序</h4>
 <p><span style="background-color: #ffff00;">1 ~ 4 為大一上計算機程式課程內容</span></p>
@@ -875,142 +896,7 @@ execargs = /usr/bin/fossil http /home/kmol2019/repository/ --https --nojail --no
 <p style="padding-left: 60px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-4972-7">https://link.springer.com/book/10.1007/978-1-4842-4972-7</a></p>
 <p style="padding-left: 30px;">中的範例說明, 完成各組期末專案.</p>
 <p style="padding-left: 30px;">期末分組專案: 請根據上述 Task1 ~ Task4 的內容做為參考, 討論如何完成一個能夠在網頁與手機上執行的期末專案.</p>
-<h2>分組名單</h2>
-<p>cp 1a 分組結果:</p>
-<p>====================</p>
-<p>ag1 分組倉儲與網站:</p>
-<p><a href="https://github.com/40823142/cp2019ag1">https://github.com/40823142/cp2019ag1</a></p>
-<p><a href="https://40823142.github.io/cp2019ag1">https://40823142.github.io/cp2019ag1</a> </p>
-<p><br/> 第 1 組成員:<br/> <a href="https://github.com/s40523147/cp2019/">40523147 倉儲</a> | <a href="https://s40523147.github.io/cp2019">40523147 網站</a><br/> <a href="https://github.com/40823106/cp2019/">40823106 倉儲</a> | <a href="https://40823106.github.io/cp2019">40823106 網站</a><br/> <a href="https://github.com/40823107/cp2019/">40823107 倉儲</a> | <a href="https://40823107.github.io/cp2019">40823107 網站</a><br/> <a href="https://github.com/40823115/cp2019/">40823115 倉儲</a> | <a href="https://40823115.github.io/cp2019">40823115 網站</a><br/> <a href="https://github.com/40823126/cp2019/">40823126 倉儲</a> | <a href="https://40823126.github.io/cp2019">40823126 網站</a><br/> <a href="https://github.com/40823132/cp2019/">40823132 倉儲</a> | <a href="https://40823132.github.io/cp2019">40823132 網站</a><br/> <a href="https://github.com/40823134/cp2019/">40823134 倉儲</a> | <a href="https://40823134.github.io/cp2019">40823134 網站</a> (休學)<br/> <a href="https://github.com/40823142/cp2019/">40823142 倉儲</a> | <a href="https://40823142.github.io/cp2019">40823142 網站</a><br/> <a href="https://github.com/40823147/cp2019/">40823147 倉儲</a> | <a href="https://40823147.github.io/cp2019">40823147 網站</a><br/> <a href="https://github.com/40823149/cp2019/">40823149 倉儲</a> | <a href="https://40823149.github.io/cp2019">40823149 網站</a><br/> ====================</p>
-<p><span>ag2 分組倉儲與網站:</span></p>
-<p><a href="https://github.com/40823130/cp2019ag2">https://github.com/40823130/cp2019ag2</a></p>
-<p><a href="https://40823130.github.io/cp2019ag2">https://40823130.github.io/cp2019ag2</a>  </p>
-<p><br/> 第 2 組成員:<br/> <a href="https://github.com/s40523106/cp2019/">40523106 倉儲</a> | <a href="https://s40523106.github.io/cp2019">40523106 網站</a><br/> <a href="https://github.com/40623153/cp2019/">40623153 倉儲</a> | <a href="https://40623153.github.io/cp2019">40623153 網站</a><br/> <a href="https://github.com/40623157/cp2019/">40623157 倉儲</a> | <a href="https://40623157.github.io/cp2019">40623157 網站</a><br/> <a href="https://github.com/40723113/cp2019/">40723113 倉儲</a> | <a href="https://40723113.github.io/cp2019">40723113 網站</a><br/> <a href="https://github.com/40823110/cp2019/">40823110 倉儲</a> | <a href="https://40823110.github.io/cp2019">40823110 網站</a><br/> <a href="https://github.com/40823120/cp2019/">40823120 倉儲</a> | <a href="https://40823120.github.io/cp2019">40823120 網站</a><br/> <a href="https://github.com/40823129/cp2019/">40823129 倉儲</a> | <a href="https://40823129.github.io/cp2019">40823129 網站</a><br/> <a href="https://github.com/40823130/cp2019/">40823130 倉儲</a> | <a href="https://40823130.github.io/cp2019">40823130 網站</a><br/> <a href="https://github.com/40823136/cp2019/">40823136 倉儲</a> | <a href="https://40823136.github.io/cp2019">40823136 網站</a><br/> <a href="https://github.com/40823150/cp2019/">40823150 倉儲</a> | <a href="https://40823150.github.io/cp2019">40823150 網站</a><br/> ====================</p>
-<p><span>ag3 分組倉儲與網站:</span></p>
-<p><span><a href="https://github.com/40823113/cp2019ag3">https://github.com/40823113/cp2019ag3</a></span></p>
-<p><a href="https://40823113.github.io/cp2019ag3">https://40823113.github.io/cp2019ag3</a> </p>
-<p><br/> 第 3 組成員:<br/> <a href="https://github.com/s40523203/cp2019/">40523203 倉儲</a> | <a href="https://s40523203.github.io/cp2019">40523203 網站</a><br/> <a href="https://github.com/40823101/cp2019/">40823101 倉儲</a> | <a href="https://40823101.github.io/cp2019">40823101 網站</a><br/> <a href="https://github.com/40823103/cp2019/">40823103 倉儲</a> | <a href="https://40823103.github.io/cp2019">40823103 網站</a><br/> <a href="https://github.com/40823113/cp2019/">40823113 倉儲</a> | <a href="https://40823113.github.io/cp2019">40823113 網站</a><br/> <a href="https://github.com/40823118/cp2019/">40823118 倉儲</a> | <a href="https://40823118.github.io/cp2019">40823118 網站</a><br/> <a href="https://github.com/40823125/cp2019/">40823125 倉儲</a> | <a href="https://40823125.github.io/cp2019">40823125 網站</a><br/> <a href="https://github.com/40823127/cp2019/">40823127 倉儲</a> | <a href="https://40823127.github.io/cp2019">40823127 網站</a><br/> <a href="https://github.com/40823137/cp2019/">40823137 倉儲</a> | <a href="https://40823137.github.io/cp2019">40823137 網站</a><br/> <a href="https://github.com/40823145/cp2019/">40823145 倉儲</a> | <a href="https://40823145.github.io/cp2019">40823145 網站</a><br/> <a href="https://github.com/40823151/cp2019/">40823151 倉儲</a> | <a href="https://40823151.github.io/cp2019">40823151 網站</a><br/> ====================</p>
-<p><span>ag4 分組倉儲與網站:</span></p>
-<p><a href="https://github.com/a40823112/cp2019ag4">https://github.com/a40823112/cp2019ag4</a> </p>
-<p><a href="https://a40823112.github.io/cp2019ag4">https://a40823112.github.io/cp2019ag4</a> </p>
-<p><br/> 第 4 組成員:<br/> <a href="https://github.com/40623156/cp2019/">40623156 倉儲</a> | <a href="https://40623156.github.io/cp2019">40623156 網站</a><br/> <a href="https://github.com/40823104/cp2019/">40823104 倉儲</a> | <a href="https://40823104.github.io/cp2019">40823104 網站</a><br/> <a href="https://github.com/40823109/cp2019/">40823109 倉儲</a> | <a href="https://40823109.github.io/cp2019">40823109 網站</a><br/> <a href="https://github.com/40823111/cp2019/">40823111 倉儲</a> | <a href="https://40823111.github.io/cp2019">40823111 網站</a><br/> <a href="https://github.com/a40823112/cp2019/">40823112 倉儲</a> | <a href="https://a40823112.github.io/cp2019">40823112 網站</a><br/> <a href="https://github.com/40823116/cp2019/">40823116 倉儲</a> | <a href="https://40823116.github.io/cp2019">40823116 網站</a><br/> <a href="https://github.com/40823119/cp2019/">40823119 倉儲</a> | <a href="https://40823119.github.io/cp2019">40823119 網站</a><br/> <a href="https://github.com/40823123/cp2019/">40823123 倉儲</a> | <a href="https://40823123.github.io/cp2019">40823123 網站</a><br/> <a href="https://github.com/40823128/cp2019/">40823128 倉儲</a> | <a href="https://40823128.github.io/cp2019">40823128 網站</a><br/> <a href="https://github.com/40823144/cp2019/">40823144 倉儲</a> | <a href="https://40823144.github.io/cp2019">40823144 網站</a><br/> ====================</p>
-<p><span>ag5 分組倉儲與網站:</span></p>
-<p><a href="https://github.com/40823102/cp2019ag5">https://github.com/40823102/cp2019ag5</a></p>
-<p><a href="https://40823102.github.io/cp2019ag5/">https://40823102.github.io/cp2019ag5/</a></p>
-<p><br/> 第 5 組成員:<br/> <a href="https://github.com/40623155/cp2019/">40623155 倉儲</a> | <a href="https://40623155.github.io/cp2019">40623155 網站</a><br/> <a href="https://github.com/40823102/cp2019/">40823102 倉儲</a> | <a href="https://40823102.github.io/cp2019">40823102 網站</a><br/> <a href="https://github.com/40823108/cp2019/">40823108 倉儲</a> | <a href="https://40823108.github.io/cp2019">40823108 網站</a><br/> <a href="https://github.com/40823122/cp2019/">40823122 倉儲</a> | <a href="https://40823122.github.io/cp2019">40823122 網站</a><br/> <a href="https://github.com/40823133/cp2019/">40823133 倉儲</a> | <a href="https://40823133.github.io/cp2019">40823133 網站</a> (休學)<br/> <a href="https://github.com/40823135/cp2019/">40823135 倉儲</a> | <a href="https://40823135.github.io/cp2019">40823135 網站</a><br/> <a href="https://github.com/40823139/cp2019/">40823139 倉儲</a> | <a href="https://40823139.github.io/cp2019">40823139 網站</a><br/> <a href="https://github.com/40823140/cp2019/">40823140 倉儲</a> | <a href="https://40823140.github.io/cp2019">40823140 網站</a><br/> <a href="https://github.com/40823141/cp2019/">40823141 倉儲</a> | <a href="https://40823141.github.io/cp2019">40823141 網站</a><br/> <a href="https://github.com/40823148/cp2019/">40823148 倉儲</a> | <a href="https://40823148.github.io/cp2019">40823148 網站</a><br/> ====================</p>
-<p><span>ag6 分組倉儲與網站:</span></p>
-<p><a href="https://github.com/40823131/cp2019ag6">https://github.com/40823131/cp2019ag6</a></p>
-<p><a href="https://40823131.github.io/cp2019ag6">https://40823131.github.io/cp2019ag6</a> </p>
-<p><br/> 第 6 組成員:<br/> <a href="https://github.com/40823105/cp2019/">40823105 倉儲</a> | <a href="https://40823105.github.io/cp2019">40823105 網站</a><br/> <a href="https://github.com/40823114/cp2019/">40823114 倉儲</a> | <a href="https://40823114.github.io/cp2019">40823114 網站</a><br/> <a href="https://github.com/40823117/cp2019/">40823117 倉儲</a> | <a href="https://40823117.github.io/cp2019">40823117 網站</a><br/> <a href="https://github.com/40823121/cp2019/">40823121 倉儲</a> | <a href="https://40823121.github.io/cp2019">40823121 網站</a><br/> <a href="https://github.com/40823124/cp2019/">40823124 倉儲</a> | <a href="https://40823124.github.io/cp2019">40823124 網站</a><br/> <a href="https://github.com/40823131/cp2019/">40823131 倉儲</a> | <a href="https://40823131.github.io/cp2019">40823131 網站</a><br/> <a href="https://github.com/40823138/cp2019/">40823138 倉儲</a> | <a href="https://40823138.github.io/cp2019">40823138 網站</a><br/> <a href="https://github.com/40823143/cp2019/">40823143 倉儲</a> | <a href="https://40823143.github.io/cp2019">40823143 網站</a><br/> <a href="https://github.com/40823146/cp2019/">40823146 倉儲</a> | <a href="https://40823146.github.io/cp2019">40823146 網站</a></p>
-<p><br/> [[40523147, 40823106, 40823107, 40823115, 40823126, 40823132, 40823134, 40823142, 40823147, 40823149], [40523106, 40623153, 40623157, 40723113, 40823110, 40823120, 40823129, 40823130, 40823136, 40823150], [40523203, 40823101, 40823103, 40823113, 40823118, 40823125, 40823127, 40823137, 40823145, 40823151], [40623156, 40823104, 40823109, 40823111, 40823112, 40823116, 40823119, 40823123, 40823128, 40823144], [40623155, 40823102, 40823108, 40823122, 40823133, 40823135, 40823139, 40823140, 40823141, 40823148], [40823105, 40823114, 40823117, 40823121, 40823124, 40823131, 40823138, 40823143, 40823146]]</p>
-<p><span>cp 1b 分組結果:</span></p>
-<p>====================</p>
-<p><span>bg1 </span>分組倉儲與網站:</p>
-<p><a href="https://github.com/s40523124/cp2019bg1">https://github.com/s40523124/cp2019bg1</a></p>
-<p><a href="https://s40523124.github.io/cp2019bg1/">https://s40523124.github.io/cp2019bg1/</a></p>
-<p><br/> 第 1 組成員:<br/> <a href="https://github.com/s40523113/cp2019/">40523113 倉儲</a> | <a href="https://s40523113.github.io/cp2019">40523113 網站</a><br/> <a href="https://github.com/s40523124/cp2019/">40523124 倉儲</a> | <a href="https://s40523124.github.io/cp2019">40523124 網站</a><br/> <a href="https://github.com/s40523242/cp2019/">40523242 倉儲</a> | <a href="https://s40523242.github.io/cp2019">40523242 網站</a><br/> <a href="https://github.com/40823202/cp2019/">40823202 倉儲</a> | <a href="https://40823202.github.io/cp2019">40823202 網站</a><br/> <a href="https://github.com/40823206/cp2019/">40823206 倉儲</a> | <a href="https://40823206.github.io/cp2019">40823206 網站</a><br/> <a href="https://github.com/40823223/cp2019/">40823223 倉儲</a> | <a href="https://40823223.github.io/cp2019">40823223 網站</a><br/> <a href="https://github.com/40823237/cp2019/">40823237 倉儲</a> | <a href="https://40823237.github.io/cp2019">40823237 網站</a><br/> <a href="https://github.com/40823241/cp2019/">40823241 倉儲</a> | <a href="https://40823241.github.io/cp2019">40823241 網站</a><br/> <a href="https://github.com/40823248/cp2019/">40823248 倉儲</a> | <a href="https://40823248.github.io/cp2019">40823248 網站</a><br/> <a href="https://github.com/40823251/cp2019/">40823251 倉儲</a> | <a href="https://40823251.github.io/cp2019">40823251 網站</a><br/> ====================</p>
-<p><span>bg2 </span><span>分組倉儲與網站:</span></p>
-<p><a href="https://github.com/40823221/cp2019bg2">https://github.com/40823221/cp2019bg2</a></p>
-<p><a href="https://40823221.github.io/cp2019bg2">https://40823221.github.io/cp2019bg2</a> </p>
-<p><br/> 第 2 組成員:<br/> <a href="https://github.com/s40523108/cp2019/">40523108 倉儲</a> | <a href="https://s40523108.github.io/cp2019">40523108 網站</a><br/> <a href="https://github.com/s40523207/cp2019/">40523207 倉儲</a> | <a href="https://s40523207.github.io/cp2019">40523207 網站</a><br/> <a href="https://github.com/40823207/cp2019/">40823207 倉儲</a> | <a href="https://40823207.github.io/cp2019">40823207 網站</a><br/> <a href="https://github.com/40823213/cp2019/">40823213 倉儲</a> | <a href="https://40823213.github.io/cp2019">40823213 網站</a><br/> <a href="https://github.com/40823220/cp2019/">40823220 倉儲</a> | <a href="https://40823220.github.io/cp2019">40823220 網站</a><br/> <a href="https://github.com/40823221/cp2019/">40823221 倉儲</a> | <a href="https://40823221.github.io/cp2019">40823221 網站</a><br/> <a href="https://github.com/40823222/cp2019/">40823222 倉儲</a> | <a href="https://40823222.github.io/cp2019">40823222 網站</a><br/> <a href="https://github.com/40823236/cp2019/">40823236 倉儲</a> | <a href="https://40823236.github.io/cp2019">40823236 網站</a><br/> <a href="https://github.com/40823247/cp2019/">40823247 倉儲</a> | <a href="https://40823247.github.io/cp2019">40823247 網站</a><br/> <a href="https://github.com/40823249/cp2019/">40823249 倉儲</a> | <a href="https://40823249.github.io/cp2019">40823249 網站</a><br/> ====================</p>
-<p><span>bg3 </span><span>分組倉儲與網站:</span></p>
-<p><span><a href="https://github.com/40823246/cp2019bg3">https://github.com/40823246/cp2019bg3</a></span></p>
-<p><a href="https://40823246.github.io/cp2019bg3">https://40823246.github.io/cp2019bg3</a>    </p>
-<p><br/> 第 3 組成員:<br/> <a href="https://github.com/s40523138/cp2019/">40523138 倉儲</a> | <a href="https://s40523138.github.io/cp2019">40523138 網站</a><br/> <a href="https://github.com/s40523241/cp2019/">40523241 倉儲</a> | <a href="https://s40523241.github.io/cp2019">40523241 網站</a><br/> <a href="https://github.com/40823209/cp2019/">40823209 倉儲</a> | <a href="https://40823209.github.io/cp2019">40823209 網站</a><br/> <a href="https://github.com/40823214/cp2019/">40823214 倉儲</a> | <a href="https://40823214.github.io/cp2019">40823214 網站</a><br/> <a href="https://github.com/40823216/cp2019/">40823216 倉儲</a> | <a href="https://40823216.github.io/cp2019">40823216 網站</a><br/> <a href="https://github.com/40823218/cp2019/">40823218 倉儲</a> | <a href="https://40823218.github.io/cp2019">40823218 網站</a><br/> <a href="https://github.com/40823238/cp2019/">40823238 倉儲</a> | <a href="https://40823238.github.io/cp2019">40823238 網站</a><br/> <a href="https://github.com/40823243/cp2019/">40823243 倉儲</a> | <a href="https://40823243.github.io/cp2019">40823243 網站</a><br/> <a href="https://github.com/40823246/cp2019/">40823246 倉儲</a> | <a href="https://40823246.github.io/cp2019">40823246 網站</a><br/> <a href="https://github.com/40823250/cp2019/">40823250 倉儲</a> | <a href="https://40823250.github.io/cp2019">40823250 網站</a><br/> ====================</p>
-<p><span>bg4 </span><span>分組倉儲與網站:</span></p>
-<p><a href="https://github.com/40823245/cp2019bg4">https://github.com/40823245/cp2019bg4</a></p>
-<p><a href="https://40823245.github.io/cp2019bg4">https://40823245.github.io/cp2019bg4</a> </p>
-<p><br/> 第 4 組成員:<br/> <a href="https://github.com/40823208/cp2019/">40823208 倉儲</a> | <a href="https://40823208.github.io/cp2019">40823208 網站</a><br/> <a href="https://github.com/40823212/cp2019/">40823212 倉儲</a> | <a href="https://40823212.github.io/cp2019">40823212 網站</a><br/> <a href="https://github.com/40823217/cp2019/">40823217 倉儲</a> | <a href="https://40823217.github.io/cp2019">40823217 網站</a><br/> <a href="https://github.com/40823226/cp2019/">40823226 倉儲</a> | <a href="https://40823226.github.io/cp2019">40823226 網站</a><br/> <a href="https://github.com/40823230/cp2019/">40823230 倉儲</a> | <a href="https://40823230.github.io/cp2019">40823230 網站</a><br/> <a href="https://github.com/40823232/cp2019/">40823232 倉儲</a> | <a href="https://40823232.github.io/cp2019">40823232 網站</a><br/> <a href="https://github.com/40823233/cp2019/">40823233 倉儲</a> | <a href="https://40823233.github.io/cp2019">40823233 網站</a><br/> <a href="https://github.com/40823240/cp2019/">40823240 倉儲</a> | <a href="https://40823240.github.io/cp2019">40823240 網站</a><br/> <a href="https://github.com/40823244/cp2019/">40823244 倉儲</a> | <a href="https://40823244.github.io/cp2019">40823244 網站</a><br/> <a href="https://github.com/40823245/cp2019/">40823245 倉儲</a> | <a href="https://40823245.github.io/cp2019">40823245 網站</a><br/> ====================</p>
-<p><span>bg5 </span><span>分組倉儲與網站:</span></p>
-<p><a href="https://github.com/s40523111/cp2019bg5">https://github.com/s40523111/cp2019bg5</a></p>
-<p><a href="https://s40523111.github.io/cp2019bg5/">https://s40523111.github.io/cp2019bg5/</a></p>
-<p><br/> 第 5 組成員:<br/> <a href="https://github.com/s40523111/cp2019/">40523111 倉儲</a> | <a href="https://s40523111.github.io/cp2019">40523111 網站</a><br/> <a href="https://github.com/40823201/cp2019/">40823201 倉儲</a> | <a href="https://40823201.github.io/cp2019">40823201 網站</a><br/> <a href="https://github.com/40823203/cp2019/">40823203 倉儲</a> | <a href="https://40823203.github.io/cp2019">40823203 網站</a><br/> <a href="https://github.com/40823204/cp2019/">40823204 倉儲</a> | <a href="https://40823204.github.io/cp2019">40823204 網站</a><br/> <a href="https://github.com/40823205/cp2019/">40823205 倉儲</a> | <a href="https://40823205.github.io/cp2019">40823205 網站</a><br/> <a href="https://github.com/40823210/cp2019/">40823210 倉儲</a> | <a href="https://40823210.github.io/cp2019">40823210 網站</a><br/> <a href="https://github.com/40823225/cp2019/">40823225 倉儲</a> | <a href="https://40823225.github.io/cp2019">40823225 網站</a><br/> <a href="https://github.com/40823227/cp2019/">40823227 倉儲</a> | <a href="https://40823227.github.io/cp2019">40823227 網站</a><br/> <a href="https://github.com/40823234/cp2019/">40823234 倉儲</a> | <a href="https://40823234.github.io/cp2019">40823234 網站</a><br/> <a href="https://github.com/40823235/cp2019/">40823235 倉儲</a> | <a href="https://40823235.github.io/cp2019">40823235 網站</a><br/> ====================</p>
-<p><span>bg6 </span><span>分組倉儲與網站:</span></p>
-<p><a href="https://github.com/40823224/cp2019bg6">https://github.com/40823224/cp2019bg6</a></p>
-<p><a href="https://40823224.github.io/cp2019bg6">https://40823224.github.io/cp2019bg6</a>  </p>
-<p><br/> 第 6 組成員:<br/> <a href="https://github.com/40723153/cp2019/">40723153 倉儲</a> | <a href="https://40723153.github.io/cp2019">40723153 網站</a><br/> <a href="https://github.com/40732331/cp2019/">40732331 倉儲</a> | <a href="https://40732331.github.io/cp2019">40732331 網站</a><br/> <a href="https://github.com/40823211/cp2019/">40823211 倉儲</a> | <a href="https://40823211.github.io/cp2019">40823211 網站</a><br/> <a href="https://github.com/40823215/cp2019/">40823215 倉儲</a> | <a href="https://40823215.github.io/cp2019">40823215 網站</a><br/> <a href="https://github.com/40823219/cp2019/">40823219 倉儲</a> | <a href="https://40823219.github.io/cp2019">40823219 網站</a><br/> <a href="https://github.com/40823224/cp2019/">40823224 倉儲</a> | <a href="https://40823224.github.io/cp2019">40823224 網站</a><br/> <a href="https://github.com/40823228/cp2019/">40823228 倉儲</a> | <a href="https://40823228.github.io/cp2019">40823228 網站</a><br/> <a href="https://github.com/40823229/cp2019/">40823229 倉儲</a> | <a href="https://40823229.github.io/cp2019">40823229 網站</a><br/> <a href="https://github.com/40823231-2/cp2019/">40823231 倉儲</a> | <a href="https://40823231-2.github.io/cp2019">40823231 網站</a><br/> <a href="https://github.com/40823239/cp2019/">40823239 倉儲</a> | <a href="https://40823239.github.io/cp2019">40823239 網站</a><br/> <a href="https://github.com/40823242/cp2019/">40823242 倉儲</a> | <a href="https://40823242.github.io/cp2019">40823242 網站</a></p>
-<p><br/> [[40523113, 40523124, 40523242, 40823202, 40823206, 40823223, 40823237, 40823241, 40823248, 40823251], [40523108, 40523207, 40823207, 40823213, 40823220, 40823221, 40823222, 40823236, 40823247, 40823249], [40523138, 40523241, 40823209, 40823214, 40823216, 40823218, 40823238, 40823243, 40823246, 40823250], [40823208, 40823212, 40823217, 40823226, 40823230, 40823232, 40823233, 40823240, 40823244, 40823245], [40523111, 40823201, 40823203, 40823204, 40823205, 40823210, 40823225, 40823227, 40823234, 40823235], [40723153, 40732331, 40823211, 40823215, 40823219, 40823224, 40823228, 40823229, 40823231, 40823239, 40823242]]</p>
-<h4>亂數分組程式</h4>
-<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">import 'dart:html';
-
-void main() {
-  // 每一組 10 人
-  int num = 10;
-  // 組序由 1 開始
-  int gth = 1;
-  // 迴圈序號變數
-  int i;
-  // 每組學員暫存數列
-  var gp_list = [];
-  // 全班分組數列
-  var cp2019 = [];
-
-  HttpRequest.getString(
-          'https://mde.tw/cp2019/downloads/2019fall_cp_1b_list.txt')
-      .then((String resp) {
-    // 利用 trim() 去除字串最後的跳行符號, 之後再利用 split() 根據 \n 轉為數列
-    var stud_list = resp.trim().split("\n");
-    // 數列利用 shuffle() 方法以隨機方法弄亂順序
-    stud_list.shuffle();
-    // 逐一讀取已經弄亂的學生學號數列, 利用模數運算每幾人分成一組
-    for (i = 0; i &lt; stud_list.length; i++) {
-      // 0, 1~(num-1), num
-      if (i % num == 0) {
-        gp_list = [];
-        // 列印區隔符號
-        print('=' * 20 + '&lt;br /&gt;');
-        print("group $gth :&lt;br /&gt;");
-        print(stud_list[i] + '&lt;br /&gt;');
-        // 在各分組數列中加入將對應的學員學號
-        gp_list.add(stud_list[i]);
-        gth = gth + 1;
-      } else {
-        print(stud_list[i] + '&lt;br /&gt;');
-        // 在各分組數列中加入將對應的學員學號
-        gp_list.add(stud_list[i]);
-      }
-      if (i % num == 0) {
-        // 逐步將各組暫存的分組數列加入全班分組數列中
-        cp2019.add(gp_list);
-      }
-    }
-    // 對各組學號排序
-    cp2019.forEach((element){element.sort();});
-    // 列出分組且排序後數列
-    print(cp2019);
-    print('&lt;br /&gt;');
-  });
-}
-</pre>
-<h4>轉換資料程式 (根據學號建立倉儲與網站連結)</h4>
-<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">import 'dart:convert';
-
-main() {
-  String id, account;
-  var lists = json.decode('''
-  [[40523113, 40523124, 40523242, 40823202, 40823206, 40823223, 40823237, 40823241, 40823248, 40823251], [40523108, 40523207, 40823207, 40823213, 40823220, 40823221, 40823222, 40823236, 40823247, 40823249], [40523138, 40523241, 40823209, 40823214, 40823216, 40823218, 40823238, 40823243, 40823246, 40823250], [40823208, 40823212, 40823217, 40823226, 40823230, 40823232, 40823233, 40823240, 40823244, 40823245], [40523111, 40823201, 40823203, 40823204, 40823205, 40823210, 40823225, 40823227, 40823234, 40823235], [40823211, 40823215, 40823219, 40823224, 40823228, 40823229, 40823231, 40823239, 40823242]]''');
-  for (int i = 0; i &lt; lists.length; i++) {
-    print('=' * 20 + "&lt;br /&gt;");
-    print("第 ${i + 1} 組成員:" + "&lt;br /&gt;");
-    for (int j = 0; j &lt; lists[i].length; j++) {
-      id = lists[i][j].toString();
-      if (id.contains('4052')) {
-        account = "s" + id;
-      } else {
-        account = id;
-      }
-      print("&lt;a href='https://github.com/" +
-          account +
-          "/cp2019/'&gt;" +
-          id +
-          " 倉儲&lt;/a&gt; | &lt;a href='https://" +
-          account +
-          ".github.io/cp2019'&gt;" +
-          id +
-          " 網站&lt;/a&gt;&lt;br /&gt;");
-    }
-  }</pre>
-<p></p><h2>協同議題</h2>
+<h2>協同議題</h2>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/I3VPL-AbWRw" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/I2_mjQ8b42E" width="560"></iframe></p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/WUhllVXoDgo" width="560"></iframe></p>
